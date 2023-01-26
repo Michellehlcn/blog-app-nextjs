@@ -1,0 +1,160 @@
+
+import React, { useState, useEffect } from "react";
+import Image from 'next/image';
+import Head from 'next/head';
+import Link from 'next/link';
+
+import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
+import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FiMoon, FiSun } from "react-icons/fi";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+
+import { DarkModeProvider, useDarkMode } from "../context/DarkMode";
+
+const NavBar = () => {
+    const [nav, setNav] = useState(false);
+    const handleNav = () => {
+        setNav(!nav);
+    }
+
+    const { isDarkMode, changeDarkMode } = useDarkMode();
+    const popUp = {
+        hidden: { scale: 0, opacity: 0 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+        },
+        transition: {
+          type: "spring",
+        },
+      };
+
+    const [shadow, setShadow ] = useState(false);
+    useEffect(() => {
+        const handleShadow = () =>{
+            if (window.scrollY >= 90) {
+                setShadow(true);
+            } else {
+                setShadow(false);
+            }
+        };
+        window.addEventListener('scroll', handleShadow);
+    }, []);
+    
+    return (
+        <div id ="navbar">
+            <div className={shadow ? "fixed w-full h-10 shadow-xl z-[100]" :"fixed w-full h-10 z-[100] ease-in-out duration-300 dark:bg-darkPrimary dark:text-gray-100"}>
+                <div className="w-full h-full mx-auto p-2 flex justify-between items-center px-2 2xl:px-16">
+                    <p className="uppercase cursor-pointer hidden md:flex text-xs"> michellehlcn</p>
+                    <div>
+                        <ul className="hidden md:flex">
+                            <Link href='/'>
+                                <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Home</li>
+                            </Link>
+                            <Link href='/#about'>
+                                <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">About</li>
+                            </Link>
+                            <Link href='/#skills'>
+                                <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Skills</li>
+                            </Link>
+                            <Link href='/#portfolio'>
+                                <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Portfolios</li>
+                            </Link>
+                            <Link href='/'>
+                                <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Testimonals</li>
+                            </Link>
+                            <Link href='/#contact'>
+                                <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Contact</li>
+                            </Link>
+                        </ul>
+                    </div>
+
+                    <div onClick={handleNav} className="md:hidden sm:flex z-10 md:absolute md:inset-0 md:justify-center">
+                        <AiOutlineMenu size={25} />
+                    </div>
+                    {/* DarkMode Container */}
+                    <div className="cursor-pointer flex"> 
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={popUp}
+                            className="cursor-pointer rounded-full z-30 transition active:scale-75"
+                            title="Toggle Theme"
+                            onClick={() => changeDarkMode(!isDarkMode)}
+                        >
+                            {isDarkMode ? (
+                                <FiMoon className="h-6 w-6 sm:h-7 sm:w-7 select-none transition active:scale-75" />
+                            ) : (
+                                <FiSun className="h-6 w-6 sm:h-7 sm:w-7 select-none transition active:scale-75" />
+                            )}
+                        </motion.div>
+                    </div>
+                </div>
+
+
+                <div className={nav ? "md:hidden  fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
+                    <div className={nav
+                        ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+                        : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
+                        <div>
+                            <div className="flex w-full items-center justify-between">
+                                <p className="uppercase cursor-pointer shadow-xl"> michellehlcn</p>
+                                <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
+                                    <AiOutlineClose />
+                                </div>
+                            </div>
+                            <div className="border-b border-gray-300 my-4 ">
+                                <p className="w-[85%] md:w-[90%] py-4"> #BeBrave</p>
+
+                            </div>
+                        </div>
+                        <div className="py-4 flex flex-col">
+                            <ul className="uppercase">
+                                <Link href="/">
+                                    <li className="py-4 text-sm">Home</li>
+                                </Link>
+                                <Link href="/">
+                                    <li className="py-4 text-sm">About</li>
+                                </Link>
+                                <Link href="/">
+                                    <li className="py-4 text-sm">Skills</li>
+                                </Link>
+                                <Link href="/">
+                                    <li className="py-4 text-sm">Portfolios</li>
+                                </Link>
+                                <Link href="/">
+                                    <li className="py-4 text-sm">Testimonals</li>
+                                </Link>
+                                <Link href="/">
+                                    <li className="py-4 text-sm">Contact</li>
+                                </Link>
+                            </ul>
+                            <div className="pt-40">
+                                <p className="uppercase tracking-wildest text-[#5651e5]">Let's Connect</p>
+                                <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                                        <FaLinkedinIn />
+                                    </div>
+                                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                                        <FaGithub />
+                                    </div>
+                                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                                        <AiOutlineMail />
+                                    </div>
+                                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                                        <FaTwitter />
+                                    </div>
+                                    <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                                        <BsFillPersonLinesFill />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+export default NavBar;
