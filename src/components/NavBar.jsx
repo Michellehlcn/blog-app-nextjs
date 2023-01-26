@@ -46,7 +46,7 @@ const NavBar = () => {
         <div id ="navbar">
             <div className={shadow ? "fixed w-full h-10 shadow-xl z-[100]" :"fixed w-full h-10 z-[100] ease-in-out duration-300 dark:bg-darkPrimary dark:text-gray-100"}>
                 <div className="w-full h-full mx-auto p-2 flex justify-between items-center px-2 2xl:px-16">
-                    <p className="uppercase cursor-pointer hidden md:flex text-xs"> michellehlcn</p>
+                    <Link href="/" ><p className="uppercase cursor-pointer hidden md:flex text-xs"> michellehlcn</p></Link>
                     <div>
                         <ul className="hidden md:flex">
                             <Link href='/'>
@@ -99,7 +99,7 @@ const NavBar = () => {
                         : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
                         <div>
                             <div className="flex w-full items-center justify-between">
-                                <p className="uppercase cursor-pointer shadow-xl"> michellehlcn</p>
+                                <Link href="/" ><p className="uppercase cursor-pointer shadow-xl"> michellehlcn</p></Link>
                                 <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
                                     <AiOutlineClose />
                                 </div>
@@ -112,22 +112,22 @@ const NavBar = () => {
                         <div className="py-4 flex flex-col">
                             <ul className="uppercase">
                                 <Link href="/">
-                                    <li className="py-4 text-sm">Home</li>
+                                    <li onClick={()=>setNav(false)} className="py-4 text-sm">Home</li>
+                                </Link>
+                                <Link href="/#about">
+                                    <li onClick={()=>setNav(false)} className="py-4 text-sm">About</li>
+                                </Link>
+                                <Link href="/#skills">
+                                    <li  onClick={()=>setNav(false)} className="py-4 text-sm">Skills</li>
+                                </Link>
+                                <Link href="/#portfolio">
+                                    <li  onClick={()=>setNav(false)} className="py-4 text-sm">Portfolios</li>
                                 </Link>
                                 <Link href="/">
-                                    <li className="py-4 text-sm">About</li>
+                                    <li  onClick={()=>setNav(false)} className="py-4 text-sm">Testimonals</li>
                                 </Link>
-                                <Link href="/">
-                                    <li className="py-4 text-sm">Skills</li>
-                                </Link>
-                                <Link href="/">
-                                    <li className="py-4 text-sm">Portfolios</li>
-                                </Link>
-                                <Link href="/">
-                                    <li className="py-4 text-sm">Testimonals</li>
-                                </Link>
-                                <Link href="/">
-                                    <li className="py-4 text-sm">Contact</li>
+                                <Link href="/#contact">
+                                    <li  onClick={()=>setNav(false)} className="py-4 text-sm">Contact</li>
                                 </Link>
                             </ul>
                             <div className="pt-40">
