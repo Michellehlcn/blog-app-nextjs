@@ -11,14 +11,15 @@ const Main = () => {
             <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
                 <div>
                     <p className="uppercase text-sm tracking-wildest text-gray-600">A software Developer/ freelancer based in Sydney. </p>
-                    <h1 className="py-4 text-gray-700">
-                        {/* <span className="text-[#5651e5]"> */}
+                    <h1 className="py-4 ">
+                        <span className="text-[#38bdf8]"> 
                              <Typical
 									loop={Infinity}
 									steps={[
 										">cd Michellehlcn _ ",
 										1000,
 										]}/>
+                        </span>
                     </h1>
                     <p className="py-4 text-gray-600 max-w-[70%] m-auto">Hello, My name's Michelle. I'm currently working on projects domain in Back-end development, Data Analyst. See more about me.</p>
                     

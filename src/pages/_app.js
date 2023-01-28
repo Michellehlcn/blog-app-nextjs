@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div className={roboto.className}>
       <DarkModeProvider>
-      <NavBar />
+        <NavBar />
         <Component {...pageProps} />
         <Footer />
       </DarkModeProvider>

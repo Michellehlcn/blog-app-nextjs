@@ -3,8 +3,8 @@ import Portfolioitem from "./PortfolioItem";
 
 const Portfolios = () => {
     return (
-        <div id="portfolio" className="w-full "> 
-            <div className="max-w-[1240px] mx-auto px-2 py-16 w-full">
+        <div id="portfolio" className="w-screen "> 
+            <div className="max-w-4xl exl:max-w-5xl 3xl:max-w-7xl mx-auto px-2 py-16 w-full">
                 <p className="text-xl tracking-wildest uppercase text-[#5651e5]">Portfolios</p>
                 <h2 className="py-4">What I've built</h2>
                 <div className="grid md:grid-cols-2 gap-8">

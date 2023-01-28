@@ -27,14 +27,14 @@ function whenPlaying({ song }) {
                     <div className="flex items-center gap-2">
                         <div className="w-10 h-10">
                             <Image
-                            alt={song.title}
-                            src={song.albumImageUrl}
-                            width={40}
-                            height={40}
-                            layout="fixed"
-                            quality={50}
-                            placeholder="blur"
-                            blurDataURL={song.albumImageUrl}
+                                alt={song.title}
+                                src={song.albumImageUrl}
+                                width={40}
+                                height={40}
+                                layout="fixed"
+                                quality={50}
+                                placeholder="blur"
+                                blurDataURL={song.albumImageUrl}
                             />
                         </div>
                         <div className="flex flex-col sm:flex-col sm:items-center sm:gap-3">
@@ -83,18 +83,18 @@ const Footer = () => {
 
     if (!data) return <div>Loading ...</div>
     return (
-        <footer className="text-gray-600 dark:text-gray-400/50 w-screen font-inter mb-20 print:hidden">
+        <footer className="text-gray-600  grid grid-cols-6  w-screen mb-20 font-inter print:hidden ">
             <motion.div inital="hidden" whileInView="visible" viewport={{ once: true }}
-                className="max-w-4xl exl:max-w-5xl 3xl:max-w-7xl p-5 border-t-2 border-gray-200 dark:border-gray-400/10 max-auto text-sm sm:text-base flex flex-col gap-5"
+                className="max-w-4xl exl:max-w-5xl 3xl:max-w-7xl p-5 border-t-2 border-gray-200 dark:border-gray-400/10 max-auto text-sm sm:text-base flex flex-col justify-self-center col-start-2 col-span-4 w-full gap-5"
             >
                 <div>
                     {data?.isPlaying ? (
                         <whenPlaying song={data} />
                     ) : (
                         <div className="flex item-center gap-2 flex-row-reverse sm:flex-row justify-between sm:justify-start">
-                            <FaSpotify className="w-6 h-6 fill-green-400"/>
+                            <FaSpotify className="w-6 h-6 fill-green-400" />
                             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-                                <div className="font-semibold md:text-lg text-black dark:text-white">
+                                <div className="font-semibold md:text-lg ">
                                     Not Playing
                                 </div>
                                 <span className="hidden md:inline-flex">-</span>
@@ -120,23 +120,31 @@ const Footer = () => {
                         })}
                     </div>
                     <div className="flex flex-col gap-4 capitalize">
-                        {socialMedia.slice(0,10).map((platform, index)=> {
+                        {socialMedia.slice(0, 10).map((platform, index) => {
                             return (
-                                
+
                                 <Link key={index} href={platform.url} passHref>
-                                    <motion.a 
-                                    className="hover:text-black dark:hover:text-white w-fit"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={platform.url}
+                                    <motion.a
+                                        className="hover:text-black dark:hover:text-white w-fit"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href={platform.url}
                                     >
-                                      <i className={platform.Icon} ></i> {platform.title}
+                                        <i className={platform.Icon} ></i> {platform.title}
                                     </motion.a>
-                                    </Link>
+                                </Link>
                             )
                         })}
                     </div>
                 </section>
+
+                <div class="py-6 mb-6 sm:mb-0 sm:flex ">
+                    <p>Copyright © 2023 Michellehlcn.</p>
+                    <p class="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
+                        <a class="hover:text-slate-900 dark:hover:text-slate-400" href="/brand">Privacy Policy</a>
+                    </p>
+                    <a class="sm:ml-4 sm:pl-4  cursor-pointer sm:border-l sm:border-slate-200 hover:text-slate-900 dark:hover:text-slate-400" href="">Edit this page on GitHub</a>
+                </div>
             </motion.div>
         </footer>
     )
