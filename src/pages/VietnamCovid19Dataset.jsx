@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { RiRadioButtonFill } from "react-icons/ri";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 import Img from "../../public/assets/portfolios/3.png";
 
@@ -20,7 +21,7 @@ const VietnamCovid19Dataset = () => {
 
             {/* Content */}
             <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-10">
-                <div className="col-span-4">
+                <div className="col-span-5 mb-7">
                     <p>Project</p>
                     <h2>Overview</h2>
                     <p>A website made to track Covid-19 cases and Vaccine Rollout.</p>
@@ -32,24 +33,24 @@ const VietnamCovid19Dataset = () => {
                 </div>
 
                 {/* Technologies */}
-                <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 grounded-xl py-4">
+                <div className="col-span-4 md:col-span-4 shadow-xl grounded-xl py-4">
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
-                        <div className="grid grid-cols-3 md:grid-cols-1">
-                            <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" />Python
+                        <div className="grid grid-cols-3 md:grid-cols-3">
+                            <p className="text-gray-600 py-2 flex items-center col-span-1">
+                            <AiFillCheckCircle className="pr-1"/>Python
+                            </p>
+                            <p className="text-gray-600 py-2 flex items-center col-span-1">
+                            <AiFillCheckCircle className="pr-1"/>Javascript
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" />Javascript
+                            <AiFillCheckCircle className="pr-1"/>Google API
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" />Google API
+                            <AiFillCheckCircle className="pr-1"/>Chartjs
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" />Chartjs
-                            </p>
-                            <p className="text-gray-600 py-2 flex items-center">
-                                <RiRadioButtonFill className="pr-1" />Data Studio
+                            <AiFillCheckCircle className="pr-1"/>Data Studio
                             </p>
                         </div>
                     </div>

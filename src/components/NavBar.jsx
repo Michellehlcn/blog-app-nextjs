@@ -4,8 +4,12 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
-import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineMail, AiOutlineHome, AiOutlineProject } from "react-icons/ai";
+import { BsPersonBoundingBox } from "react-icons/bs";
+import { BiPhoneCall } from "react-icons/bi";
+import { GiSkills } from "react-icons/gi";
+import { SiBlogger } from "react-icons/si";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaComments } from "react-icons/fa";
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
@@ -74,26 +78,25 @@ const NavBar = () => {
                             </ul>
                         </div>
 
-                        <div onClick={handleNav} className="cursor-pointer md:hidden sm:flex z-10 flex sm:items-right">
-                            <AiOutlineMenu size={25} />
-                        </div>
-
                     </div>
-                    <div className="co-start-3 col-span-1 justify-self-end">
+                    <div onClick={handleNav} className="cursor-pointer md:hidden col-start-6 col-span-1 justify-self-end">
+                            <AiOutlineMenu size={25} />
+                    </div>
+                    <div className="col-start-6 col-span-1 justify-self-end hidden md:flex">
                         {/* DarkMode Container */}
                         <div className="cursor-pointer flex">
                             <motion.div
                                 initial="hidden"
                                 animate="visible"
                                 variants={popUp}
-                                className="cursor-pointer rounded-full z-30 transition active:scale-75"
+                                className="cursor-pointer rounded-full z-30 transition active:scale-75 "
                                 title="Toggle Theme"
                                 onClick={() => changeDarkMode(!isDarkMode)}
                             >
                                 {isDarkMode ? (
-                                    <FiMoon className="h-6 w-6 sm:h-7 sm:w-7 select-none transition active:scale-75" />
+                                    <FiMoon className="h-6 w-6 sm:h-7 sm:w-7  select-none transition active:scale-75" />
                                 ) : (
-                                    <FiSun className="h-6 w-6 sm:h-7 sm:w-7 select-none transition active:scale-75" />
+                                    <FiSun className="h-6 w-6 sm:h-7 sm:w-7  select-none transition active:scale-75" />
                                 )}
                             </motion.div>
                         </div>
@@ -107,7 +110,7 @@ const NavBar = () => {
                         : "fixed left-[-100%] top-0 p-10 ease-in duration-500"}>
                         <div>
                             <div className="flex w-full items-center justify-between">
-                                <Link href="/" ><p className="uppercase cursor-pointer "> michellehlcn</p></Link>
+                                <Link href="/" ><p className="uppercase cursor-pointer text-[#38bdf8] font-extrabold"> michellehlcn</p></Link>
                                 <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer">
                                     <AiOutlineClose />
                                 </div>
@@ -119,30 +122,30 @@ const NavBar = () => {
                         </div>
                         <div className="py-4 flex flex-col">
                             <ul className="uppercase">
-                                <Link href="/">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">Home</li>
+                            <Link href="/">
+                                <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineHome/> <span>Home</span></li>
                                 </Link>
-                                <Link href="/#about">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">About</li>
+                               <Link href="/#about">
+                                   <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <BsPersonBoundingBox /> About</li>
                                 </Link>
-                                <Link href="/#skills">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">Skills</li>
+                               <Link href="/#skills">
+                                  <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <GiSkills/>Skills</li>
                                 </Link>
                                 <Link href="/#portfolio">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">Portfolios</li>
+                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineProject/>Portfolios</li>
                                 </Link>
-                                <Link href="/#blog">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">Blog</li>
+                               <Link href="/#blog">
+                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Blog</li>
                                 </Link>
                                 <Link href="/">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">Testimonals</li>
+                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><FaComments />Testimonals</li>
                                 </Link>
                                 <Link href="/#contact">
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm">Contact</li>
+                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><BiPhoneCall/>Contact</li>
                                 </Link>
                             </ul>
                             <div className="pt-40">
-                                <p className="uppercase tracking-wildest text-[#5651e5]">Let's Connect</p>
+                                <p className="uppercase tracking-wildest text-[#38bdf8]">Let's Connect</p>
                                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                                     <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <FaLinkedinIn />

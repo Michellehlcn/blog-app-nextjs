@@ -139,11 +139,11 @@ const Footer = () => {
                 </section>
 
                 <div class="py-6 mb-6 sm:mb-0 sm:flex ">
-                    <p>Copyright © 2023 Michellehlcn.</p>
+                    <p> All rights reserved © 2023 Michellehlcn.</p>
                     <p class="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
                         <a class="hover:text-slate-900 dark:hover:text-slate-400" href="/brand">Privacy Policy</a>
                     </p>
-                    <a class="sm:ml-4 sm:pl-4  cursor-pointer sm:border-l sm:border-slate-200 hover:text-slate-900 dark:hover:text-slate-400" href="">Edit this page on GitHub</a>
+                    <a class="sm:ml-4 sm:pl-4  cursor-pointer sm:border-l sm:border-slate-200 hover:text-slate-900 dark:hover:text-slate-400" href=""></a>
                 </div>
             </motion.div>
         </footer>
