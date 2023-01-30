@@ -1,9 +1,9 @@
 
-import Main from '../components/Main';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Portfolios from '../components/Portfolios';
-import Contact from '../components/Contact';
+import Main from './Main';
+import About from './About';
+import Skills from './Skills';
+import Portfolios from './Portfolios';
+import Contact from './Contact';
 
 import Head from 'next/head';
 
@@ -18,10 +18,10 @@ export default function Home() {
       </Head>
      
       <Main />
-      <About />
+      {/* <About />
       <Skills/>
       <Portfolios />
-      <Contact />
+      <Contact /> */}
       {/* <main>
         <div>
           <h1 className='text-3xl font-bold underline'>About</h1>   

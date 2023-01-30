@@ -57,22 +57,22 @@ const NavBar = () => {
                                 <Link href='/'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Home</li>
                                 </Link>
-                                <Link href='/#about'>
+                                <Link href='/About'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">About</li>
                                 </Link>
-                                <Link href='/#skills'>
+                                <Link href='/Skills'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Skills</li>
                                 </Link>
-                                <Link href='/#portfolio'>
+                                <Link href='/Portfolios'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Portfolios</li>
                                 </Link>
-                                <Link href='/#blog'>
+                                <Link href='/Blog'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Blog</li>
                                 </Link>
                                 <Link href='/'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Testimonals</li>
                                 </Link>
-                                <Link href='/#contact'>
+                                <Link href='/Contact'>
                                     <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Contact</li>
                                 </Link>
                             </ul>
@@ -125,22 +125,22 @@ const NavBar = () => {
                             <Link href="/">
                                 <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineHome/> <span>Home</span></li>
                                 </Link>
-                               <Link href="/#about">
+                               <Link href="/About">
                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <BsPersonBoundingBox /> About</li>
                                 </Link>
-                               <Link href="/#skills">
+                               <Link href="/Skills">
                                   <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <GiSkills/>Skills</li>
                                 </Link>
-                                <Link href="/#portfolio">
+                                <Link href="/Portfolios">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineProject/>Portfolios</li>
                                 </Link>
-                               <Link href="/#blog">
+                               <Link href="/Blog">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Blog</li>
                                 </Link>
                                 <Link href="/">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><FaComments />Testimonals</li>
                                 </Link>
-                                <Link href="/#contact">
+                                <Link href="/Contact">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><BiPhoneCall/>Contact</li>
                                 </Link>
                             </ul>

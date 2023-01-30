@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { AiFillCheckCircle } from "react-icons/ai";
-
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Img from "../../public/assets/portfolios/3.png";
 
 const VietnamCovid19Dataset = () => {
@@ -38,19 +38,19 @@ const VietnamCovid19Dataset = () => {
                         <p className="text-center font-bold pb-2">Technologies</p>
                         <div className="grid grid-cols-3 md:grid-cols-3">
                             <p className="text-gray-600 py-2 flex items-center col-span-1">
-                            <AiFillCheckCircle className="pr-1"/>Python
+                                <AiFillCheckCircle className="pr-1" />Python
                             </p>
                             <p className="text-gray-600 py-2 flex items-center col-span-1">
-                            <AiFillCheckCircle className="pr-1"/>Javascript
+                                <AiFillCheckCircle className="pr-1" />Javascript
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                            <AiFillCheckCircle className="pr-1"/>Google API
+                                <AiFillCheckCircle className="pr-1" />Google API
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                            <AiFillCheckCircle className="pr-1"/>Chartjs
+                                <AiFillCheckCircle className="pr-1" />Chartjs
                             </p>
                             <p className="text-gray-600 py-2 flex items-center">
-                            <AiFillCheckCircle className="pr-1"/>Data Studio
+                                <AiFillCheckCircle className="pr-1" />Data Studio
                             </p>
                         </div>
                     </div>
@@ -85,6 +85,13 @@ const VietnamCovid19Dataset = () => {
                 <Link href="/#portfolio">
                     <p className="underline cursor-pointer">Back</p>
                 </Link>
+                <div className="flex justify-center py-1">
+                    <Link href="">
+                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                            <HiOutlineChevronDoubleUp size={30} />
+                        </div>
+                    </Link>
+                </div>
             </div>
         </div>
     )

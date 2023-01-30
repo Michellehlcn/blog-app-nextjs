@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Skills = () => {
     return (
-        <div id='skills' className="w-screen lg:h-screen p-2">
-        <div className="px-2 max-w-4xl exl:max-w-5xl 3xl:max-w-7xl mx-auto flex flex-col justify-center h-full">
+        <div id='skills' className="w-screen h-screen p-2 py-20">
+        <div className="px-2 max-w-4xl exl:max-w-5xl 3xl:max-w-7xl flex flex-col h-full">
                 <p className="text-xl tracking-widest uppercase text-[#5651e5]"> Skills</p>
                 <h2 className="py-4">What I can do</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 ">
