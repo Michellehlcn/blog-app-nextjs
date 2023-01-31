@@ -53,9 +53,9 @@ export default function App({ Component, pageProps }) {
         <div className='grid grid-cols-1 md:grid-cols-8'>
 
           {/* Right Side navBar */}
-          <div className={Component["id"] == "home"? 'hidden': 'md:col-start-2 md:col-span-1 '}>
+          <div className={Component["id"] == "home"? 'hidden': 'md:col-start-2 md:col-span-1 rounded-sm bg-slate-400 sticky'}>
 
-            <div className="text-white py-20 md:flex md:flex-col hidden">
+            <div className="text-white py-20 md:flex md:flex-col hidden ">
               <ul className="uppercase">
                 <Link href="/">
                   <li  className="py-4 text-sm flex gap-3 items-center"><AiOutlineHome /> <span>Home</span></li>
