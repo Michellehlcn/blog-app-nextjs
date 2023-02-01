@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
     return (
-        <div id='about' className="w-full p-2 flex items-center py-20">
+        <div id='about' className="mt-[44px] md:mt-[60px] max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl relative mx-auto p-4 mb-10 text-neutral-200;">
             <div className="px-2 m-auto gap-8 max-w-4xl exl:max-w-5xl 3xl:max-w-7xl p-5">
                 <p className="uppercase text-xl tracking-wide text-[#5651e5] mb-5">Biography</p>
                 <div className="grid grid-cols-2 mb-5">

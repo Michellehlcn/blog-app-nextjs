@@ -6,6 +6,7 @@ html{
   scroll-behavior: smooth;
 }
 @layer base{
+
   body{
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide 
   }
@@ -30,4 +31,12 @@ html{
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
   }
+
+}
+@layer components {
+
+  .card {
+    @apply bg-darkSecondary p-5 sm:p-10 flex flex-col sm:flex-row gap-8 items-center max-w-2xl shadow-md rounded-lg mt-[30%] sm:mt-8 transition-all;
+  }
+
 }
