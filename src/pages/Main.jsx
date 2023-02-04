@@ -9,11 +9,7 @@ const Main = () => {
     return (
         <div 
         id='home' 
-        className="w-full h-screen text-center " 
-        ref={node => {
-            if (node) console.log("Home Page", node)
-            //Do something with node
-          }}>
+        className="w-full h-screen text-center " >
             <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
                 <div>
                     <p className="uppercase text-sm tracking-wildest text-gray-600 pb-3">A software Developer/ freelancer based in Sydney. </p>
@@ -28,7 +24,7 @@ const Main = () => {
                         </span>
                     </a>
                     <p className="py-5 pb-10 text-gray-600 max-w-[70%] mx-auto font-thin">
-                        Hello, My name's Michelle. I'm a software developer working in Banking/Trading/Broker Industry, deliver highly liquid, scalable and low-cost trading solutions for swaps trading practitioners in the global derivative markets.
+                        Hello, My name's Michelle. I'm a software developer - team leader, working in Banking/Trading/Broker Industry, deliver highly liquid, scalable and low-cost trading solutions for swaps trading practitioners in the global derivative markets.
                     </p>
                     <a className="border-slate-50 border-1 ring-1 rounded-lg py-3 p-3 cursor-pointer mx-auto text-[#83a2b4] hover:text-[#38bdf8]
                         " href="/About" >See more about me.</a>

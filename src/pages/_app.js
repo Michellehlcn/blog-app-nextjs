@@ -17,6 +17,7 @@ import { FaComments } from "react-icons/fa";
 import { DarkModeProvider } from '../context/DarkMode';
 import NavBar from 'pages/NavBar';
 import Footer from 'pages/Footer';
+import Social from 'components/lib/social';
 
 const roboto = Roboto_Condensed({
   weight: '400',
@@ -64,8 +65,9 @@ export default function App({ Component, pageProps }) {
     }}>
       <DarkModeProvider>
         <NavBar />
+        
         <div className='grid grid-cols-1 md:grid-cols-8'>
-
+        <Social isHome={true} className="side-social-media" />
           {/* Right Side navBar */}
           <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
 

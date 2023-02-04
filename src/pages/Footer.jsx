@@ -9,15 +9,15 @@ import styled from 'styled-components';
 import { GoLocation } from 'react-icons/go';
 import IconComponent from "../components/lib/Icon";
 const navigationRoutes = [
-    "home",
-    "about",
-    "skills",
-    "portfolios",
-    "blogs",
-    "certificates",
-    "testimonials",
-    "contact",
-    "rss",
+    "Home",
+    "About",
+    "Skills",
+    "Portfolios",
+    "Blogs",
+    "Certificates",
+    "Testimonials",
+    "Contact",
+    "Rss",
 ];
 const StyledSocialList = styled.ul`
   display: flex;
@@ -36,9 +36,7 @@ const StyledSocialList = styled.ul`
   }
   li {
     display: flex;
-    // &:last-of-type {
-    //   margin-bottom: 20px;
-    // }
+
     a {
       padding: 7px;
       &:hover,
