@@ -6,7 +6,7 @@ import { FaSpotify } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import styled from 'styled-components';
-
+import { GoLocation } from 'react-icons/go';
 import IconComponent from "../components/lib/Icon";
 const navigationRoutes = [
     "home",
@@ -188,14 +188,14 @@ const Footer = () => {
                         </div>
                     </section>
 
-                    <div class="py-10 mb-6 sm:mb-0 sm:flex text-sm justify-between">
+                    <div class="py-5 mb-6 sm:mb-0 sm:flex text-sm justify-between">
                         <div className="flex">
                         <p>Copyright © 2023 Michellehlcn. All rights reserved.</p>
                         <p class="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
                             <a class="hover:text-slate-900 dark:hover:text-slate-400" href="/brand">Privacy Policy</a>
                         </p>
                         </div>
-                        <a class="sm:ml-4 sm:pl-4 cursor-pointer  hover:text-slate-900 dark:hover:text-slate-400" href="">Sydney, Australia.</a>
+                        <a class="sm:ml-4 sm:pl-4 cursor-pointer  hover:text-slate-900 dark:hover:text-slate-400 flex items-center" href=""><GoLocation /> &nbsp; Sydney, Australia.</a>
                     </div>
                 </motion.div>
             </footer></>
