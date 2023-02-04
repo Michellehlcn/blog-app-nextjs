@@ -6,34 +6,34 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const socialMedia = [
     {
-        title: "Twitter",
+        title: "twitter",
         Icon: FaTwitter,
-        url: "",
+        url: "/",
     },
     {
-        title: "Github",
+        title: "github",
         Icon: FaGithub,
-        url: "",
+        url: "/",
     },
     {
-        title: "LinkedIn",
+        title: "linkedin",
         Icon: FaLinkedinIn,
-        url: "",
+        url: "/",
     },
     {
-        title: "Mail",
+        title: "github",
         Icon: AiOutlineMail,
         url: "mailto:michellehlcn.au@gmail.com",
     },
     {
-        title: "Instagram",
+        title: "instagram",
         Icon: AiOutlineInstagram,
-        url: "",
+        url: "/",
     },
     {
-        title: "Contact",
+        title: "github",
         Icon: BsFillPersonLinesFill,
-        url: "",
+        url: "/",
     }
 ];
 export default socialMedia;

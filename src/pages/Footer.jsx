@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-import socialMedia from "../components/lib/socialMedial";
+import socialMedia from "../components/lib/socialMedia";
 
 import { FaSpotify } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import styled from 'styled-components';
 
+import IconComponent from "../components/lib/Icon";
 const navigationRoutes = [
     "home",
     "about",
@@ -17,6 +19,39 @@ const navigationRoutes = [
     "contact",
     "rss",
 ];
+const StyledSocialList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: var(--light-slate);
+  }
+  li {
+    display: flex;
+    // &:last-of-type {
+    //   margin-bottom: 20px;
+    // }
+    a {
+      padding: 7px;
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+`;
 function whenPlaying({ song }) {
     return (
         <div className="flex flex-col gap-4">
@@ -125,7 +160,9 @@ const Footer = () => {
                             })}
                         </div>
                         <div className="flex flex-col gap-4 capitalize">
-                            {socialMedia.slice(0, 10).map((platform, index) => {
+                          <StyledSocialList>
+
+                            {socialMedia && socialMedia.slice(0, 10).map((platform, index) => {
                                 return (
 
                                     <Link key={index} href={platform.url} passHref>
@@ -134,12 +171,20 @@ const Footer = () => {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             href={platform.url}
-                                        >
-                                            <i className={platform.Icon}></i> {platform.title}
+                                        >   <li>
+                                            <a  aria-label={platform.title} target="_blank" rel="noreferrer" >
+                                            <IconComponent name={platform.title} />  
+                                            
+                                            </a>
+                                            <a>{platform.title}</a>
+                                            </li>
+                               
+                                           
                                         </motion.a>
                                     </Link>
                                 );
                             })}
+                        </StyledSocialList>
                         </div>
                     </section>
 
