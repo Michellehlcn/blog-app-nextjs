@@ -1,7 +1,4 @@
-import '../styles/globals.css';
 import Link from 'next/link';
-
-import { createRoot } from "react-dom/client";
 import React, { useState, useEffect } from 'react';
 
 import { Inter } from '@next/font/google';
@@ -13,11 +10,13 @@ import { BiPhoneCall } from "react-icons/bi";
 import { GiSkills } from "react-icons/gi";
 import { SiBlogger } from "react-icons/si";
 import { FaComments } from "react-icons/fa";
+import styled from 'styled-components';
 
 import { DarkModeProvider } from '../context/DarkMode';
 import NavBar from 'pages/NavBar';
 import Footer from 'pages/Footer';
 import Social from 'components/lib/social';
+import '../styles/globals.css';
 
 const roboto = Roboto_Condensed({
   weight: '400',
@@ -41,7 +40,11 @@ const Child1 = React.forwardRef((props, ref) => {
   return <div ref={ref}>Child1</div> 
 });
 
-
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
 
 export default function App({ Component, pageProps }) {
   const [Open, setOpen] = useState(true);
@@ -57,17 +60,18 @@ export default function App({ Component, pageProps }) {
     // Set SideBar hiden on the HomePage only
     <div className={roboto.className}   ref={node => {
       if (node) {
-        if (node.childNodes[1].childNodes[1].childNodes[0].id === "home") {
+        if (node.childNodes[2].childNodes[1].childNodes[0].id === "home") {
           setSidebar(false)
         } else {
           setSidebar(true)}
         }
     }}>
+ 
       <DarkModeProvider>
         <NavBar />
-        
+        <Social isHome={true}/>
         <div className='grid grid-cols-1 md:grid-cols-8'>
-        <Social isHome={true} className="side-social-media" />
+        
           {/* Right Side navBar */}
           <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
 
@@ -110,6 +114,7 @@ export default function App({ Component, pageProps }) {
 
         <Footer />
       </DarkModeProvider>
+   
     </div>
   )
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { socialMedia } from './socialMedia';
+import socialMedia from "./socialMedia";
 import Side from './Side';
 import IconComponent from "./Icon";
 
 const StyledSocialList = styled.ul`
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -18,16 +18,18 @@ const StyledSocialList = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: var(--light-slate);
+    background-color:grey;
   }
   li {
-    display: flex;
-    // &:last-of-type {
-    //   margin-bottom: 20px;
-    // }
+    &:last-of-type {
+      margin-bottom: 20px;
+      line
+    }
     a {
-      padding: 7px;
-      &:hover,
+      &:hover {
+        color: #38bdf8;
+        scale: 105;
+      },
       &:focus {
         transform: translateY(-3px);
       }
@@ -39,18 +41,25 @@ const StyledSocialList = styled.ul`
   }
 `;
 
-const Social =({ isHome }) =>{
-    <Side isHome={isHome} orientation="left">
-        <StyledSocialList>
-            {socialMedia && socialMedia.map(({ url, title }, i) => (
-                <li key={i} >
-                    <a href={url} aria-label={title} target="_blank" rel="noreferrer" >
-                        <IconComponent name={title} />
-                    </a>
-                </li>
-            ))}
-        </StyledSocialList>
+const Social =({isHome}) =>{
+    return (
+
+    <Side isHome={isHome} orientation="left" >
+        <div>
+            <StyledSocialList>
+                {socialMedia &&  socialMedia.map(( platform , i) => {
+                    return (
+                        <li key={i} >
+                        <a  aria-label={platform.title} target="_blank" rel="noreferrer" >
+                            <IconComponent name={platform.title} />
+                        </a>
+                    </li>
+                    )
+                    })}
+            </StyledSocialList>
+        </div>           
     </Side>
+    )
 };
 
 Social.PropTypes = {
