@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 import socialMedia from "./socialMedia";
 import Side from './Side';
 import IconComponent from "./Icon";
-
+import Link from 'next/link';
 const StyledSocialList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -20,15 +20,29 @@ const StyledSocialList = styled.ul`
     margin: 0 auto;
     background-color:grey;
   }
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+
+
+  @media: (max-width: 1080px) {
+    left: 40px;
+    right: auto;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
   li {
     &:last-of-type {
       margin-bottom: 20px;
-      line
     }
     a {
+
       &:hover {
         color: #38bdf8;
-        scale: 105;
       },
       &:focus {
         transform: translateY(-3px);
@@ -41,29 +55,38 @@ const StyledSocialList = styled.ul`
   }
 `;
 
-const Social =({isHome}) =>{
-    return (
+const Social = ({ isHome }) => {
+  const [hasMounted, setHasMounted] = React.useState(false);
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) {
+    return null;
+  }
+  return (
 
-    <Side isHome={isHome} orientation="left" >
-        <div>
-            <StyledSocialList>
-                {socialMedia &&  socialMedia.map(( platform , i) => {
-                    return (
-                        <li key={i} >
-                        <a  aria-label={platform.title} target="_blank" rel="noreferrer" >
-                            <IconComponent name={platform.title} />
-                        </a>
-                    </li>
-                    )
-                    })}
-            </StyledSocialList>
-        </div>           
-    </Side>
-    )
+    // <Side isHome={isHome} orientation="left" >
+<div>
+      <StyledSocialList>
+        {socialMedia && socialMedia.slice(0, 10).map((platform, index) => {
+          return (
+            <Link key={index} href={platform.url} passHref>
+              <li>
+                <a aria-label={platform.title} target="_blank" rel="noreferrer" >
+                  <IconComponent name={platform.title} />
+                </a>
+              </li>
+            </Link>
+          );
+        })}
+      </StyledSocialList>
+      </div>
+    // </Side>
+  )
 };
 
-Social.PropTypes = {
-    isHome: PropTypes.bool,
+Social.propTypes = {
+  isHome: propTypes.bool,
 };
 
 export default Social;

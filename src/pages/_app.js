@@ -59,12 +59,12 @@ export default function App({ Component, pageProps }) {
   return (
     // Set SideBar hiden on the HomePage only
     <div className={roboto.className}   ref={node => {
-      if (node) {
-        if (node.childNodes[2].childNodes[1].childNodes[0].id === "home") {
-          setSidebar(false)
-        } else {
-          setSidebar(true)}
-        }
+      // if (node) {
+      //   if (node.childNodes[2].childNodes[1].childNodes[0].id === "home") {
+      //     setSidebar(false)
+      //   } else {
+      //     setSidebar(true)}
+      //   }
     }}>
  
       <DarkModeProvider>
@@ -73,7 +73,7 @@ export default function App({ Component, pageProps }) {
         <div className='grid grid-cols-1 md:grid-cols-8'>
         
           {/* Right Side navBar */}
-          <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
+          {/* <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
 
             <div className="text-white py-20 md:flex md:flex-col hidden ">
               <ul className="uppercase">
@@ -101,7 +101,7 @@ export default function App({ Component, pageProps }) {
               </ul>
 
             </div>
-          </div>
+          </div> */}
 
           {/* Main Content */}
           <div className='md:col-start-3 md:col-span-4 grid-cols-1'>
