@@ -4,10 +4,13 @@ import socialMedia from "../components/lib/socialMedia";
 
 import { FaSpotify } from "react-icons/fa";
 import Link from "next/link";
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import styled from 'styled-components';
 import { GoLocation } from 'react-icons/go';
+
 import IconComponent from "../components/lib/Icon";
+
 const navigationRoutes = [
     "Home",
     "About",
@@ -50,15 +53,14 @@ const StyledSocialList = styled.ul`
     }
   }
 `;
-function whenPlaying({ song }) {
+function WhenPlaying({ song }) {
     return (
         <div className="flex flex-col gap-4">
             <h4 className="text-lg font-semibold">Now Playing</h4>
-            <Link href={somg.songUrl} passJref>
-                <a href={song.songUrl} className="flex items-center justify-between bg-gray-200 dark:bg-darkSecondary p-3 sm:p-4 rounded-sm">
+            <Link href={song.songUrl} passJref className="flex items-center justify-between bg-gray-200 dark:bg-darkSecondary p-3 sm:p-4 rounded-sm">
                     <div className="flex items-center gap-2">
-                        <div className="w-10 h-10">
-                            <Image
+                        <div className="w-30 h-30">
+                            <img
                                 alt={song.title}
                                 src={song.albumImageUrl}
                                 width={40}
@@ -73,14 +75,13 @@ function whenPlaying({ song }) {
                             <h3 className="font-semibold md:text-lg text-black dark:text-white animate">
                                 {song.title}
                             </h3>
-                            <span className="hidden md:inline-flex">-</span>
+                            
                             <p className="text-gray-600 text-sx sm:text-sm">{song.artist}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2">
                         <FaSpotify className="w-6 h-6 text-green-500 animate-[spin_2s_linear_infinite]" />
                     </div>
-                </a>
             </Link>
         </div>
     )
@@ -106,6 +107,7 @@ const Footer = () => {
         fetch('/api/now-playing')
             .then((res) => res.json())
             .then((data) => {
+                console.log(data);
 
                 setData(data)
                 setLoading(false)
@@ -124,7 +126,7 @@ const Footer = () => {
 
                     <div>
                         {data?.isPlaying ? (
-                            <whenPlaying song={data} />
+                            <WhenPlaying song={data} />
                         ) : (
                             <div className="flex item-center gap-2 flex-row-reverse sm:flex-row justify-between sm:justify-start">
                                 <FaSpotify className="w-6 h-6 fill-green-400" />
@@ -142,14 +144,19 @@ const Footer = () => {
                     </div>
                     <section className="grid grid-cols-3 gap-10 text-sm border-t border-double border-slate-200 dark:border-gray-400/10 p-5 ">
                         <div className="flex flex-col gap-4 capitalize">
+                            <a className="pb-2 text-black">FEATURES</a>
                             {navigationRoutes.slice(0, 4).map((text, index) => {
                                 return (
-                                    <FooterLink key={index} id={index} route={text} text={text} className="hover:text-black"/>
+                                    <>
+                                   
+                                    <FooterLink key={index} id={index} route={text} text={text} className="hover:text-black" />
+                                    </>
                                 );
                             })}
                         </div>
 
                         <div className="flex flex-col gap-4 capitalize">
+                        <a className="pb-2 text-black">FEATURES</a>
                             {navigationRoutes.slice(4, navigationRoutes.length).map((route, index) => {
                                 let text = route;
                                 if (route === "rss")
@@ -158,7 +165,9 @@ const Footer = () => {
                             })}
                         </div>
                         <div className="flex flex-col gap-4 capitalize">
+                       
                           <StyledSocialList>
+                          <a className="pb-5 text-black">SOCIAL MEDIA</a>
 
                             {socialMedia && socialMedia.slice(0, 10).map((platform, index) => {
                                 return (
@@ -186,7 +195,7 @@ const Footer = () => {
                         </div>
                     </section>
 
-                    <div class="py-5 mb-6 sm:mb-0 sm:flex text-sm justify-between">
+                    <div class="py-5 mb-6 sm:mb-0 sm:flex text-sm justify-between border-t border-double border-slate-200 dark:border-gray-400/10">
                         <div className="flex">
                         <p>Copyright © 2023 Michellehlcn. All rights reserved.</p>
                         <p class="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
