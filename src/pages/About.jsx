@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+
 import Image from 'next/image';
+import Testmonial from "./Testimonial";
+import items from "../components/lib/testimonialData";
+
+import { BsChevronCompactLeft, BsChevronCompactRight} from "react-icons/bs";
+import { RxDotFilled } from "react-icons/rx";
 
 const About = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? items.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+  
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === items.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+  
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+  
     return (
         <div id='about' className="mt-[44px] md:mt-[60px] max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl relative mx-auto p-4 mb-10 text-neutral-200;">
             <div className="px-2 m-auto gap-8 max-w-4xl exl:max-w-5xl 3xl:max-w-7xl p-5 grid">
@@ -63,6 +87,41 @@ const About = () => {
               
                 {/* TESTIMONALS */}
                 <p className="uppercase text-xl tracking-wide text-[#5651e5]  col-span-12">What clients said about working with me?</p>
+                <div className="col-span-12">
+
+
+  <div className='max-w-[1400px] h-[780px] w-full m-auto py-4 px-4 relative group'>
+       <div className="card w-full h-full rounded-2xl bg-center bg-cover duration-500">
+                        
+                        <div className="text">
+                            <h3 className="name">{items[currentIndex].name}</h3>
+                            <i className="position">{items[currentIndex].position}</i>
+                            <p className="testimony">{items[currentIndex].quote}</p>
+                        </div>
+                    </div>
+  
+    {/* Left Arrow */}
+    <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <BsChevronCompactLeft onClick={prevSlide} size={30} />
+    </div>
+    {/* Right Arrow */}
+    <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <BsChevronCompactRight onClick={nextSlide} size={30} />
+    </div>
+    <div className='flex top-4 justify-center py-2'>
+      {items.map((slide, slideIndex) => (
+        <div
+          key={slideIndex}
+          onClick={() => goToSlide(slideIndex)}
+          className='text-2xl cursor-pointer'
+        >
+          <RxDotFilled />
+        </div>
+      ))}
+    </div>
+  </div>
+
+                </div>
             </div>
         </div>
     )
