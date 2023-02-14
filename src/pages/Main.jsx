@@ -20,7 +20,7 @@ const Main = () => {
 									loop={Infinity}
 									steps={[
 										">cd Michellehlcn _ ",
-										1000,
+										5000,
 										]}/>
                         </span>
                     </a>

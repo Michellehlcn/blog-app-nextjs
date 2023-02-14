@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
       <DarkModeProvider>
         <NavBar />
         <Social isHome={true}/>
-        <div className='grid grid-cols-1 md:grid-cols-8'>
+        <div className='full'>
         
           {/* Right Side navBar */}
           {/* <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
@@ -104,7 +104,7 @@ export default function App({ Component, pageProps }) {
           </div> */}
 
           {/* Main Content */}
-          <div className='md:col-start-3 md:col-span-4 grid-cols-1'>
+          <div className=''>
             <Component {...pageProps} />
           </div>
 
