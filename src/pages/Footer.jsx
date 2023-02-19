@@ -146,11 +146,9 @@ const Footer = () => {
                         <div className="flex flex-col gap-4 capitalize">
                             <a className="pb-2 text-black">FEATURES</a>
                             {navigationRoutes.slice(0, 4).map((text, index) => {
-                                return (
-                                    <>
-                                   
+                                return (     
                                     <FooterLink key={index} id={index} route={text} text={text} className="hover:text-black" />
-                                    </>
+
                                 );
                             })}
                         </div>
@@ -195,14 +193,14 @@ const Footer = () => {
                         </div>
                     </section>
 
-                    <div class="py-5 mb-6 sm:mb-0 sm:flex text-sm justify-between border-t border-double border-slate-200 dark:border-gray-400/10">
+                    <div className="py-5 mb-6 sm:mb-0 sm:flex text-sm justify-between border-t border-double border-slate-200 dark:border-gray-400/10">
                         <div className="flex">
                         <p>Copyright © 2023 Michellehlcn. All rights reserved.</p>
-                        <p class="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
-                            <a class="hover:text-slate-900 dark:hover:text-slate-400" href="/brand">Privacy Policy</a>
+                        <p className="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
+                            <a className="hover:text-slate-900 dark:hover:text-slate-400" href="/brand">Privacy Policy</a>
                         </p>
                         </div>
-                        <a class="sm:ml-4 sm:pl-4 cursor-pointer  hover:text-slate-900 dark:hover:text-slate-400 flex items-center" href=""><GoLocation /> &nbsp; Sydney, Australia.</a>
+                        <a className="sm:ml-4 sm:pl-4 cursor-pointer  hover:text-slate-900 dark:hover:text-slate-400 flex items-center" href=""><GoLocation /> &nbsp; Sydney, Australia.</a>
                     </div>
                 </motion.div>
             </footer></>
