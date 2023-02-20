@@ -5,6 +5,7 @@ import instagram from './icons/instagram';
 import linkedin from './icons/linkedin';
 import twitter from './icons/twitter';
 import folder from './icons/folder';
+import profile from './icons/profile';
 
 const iconTypes = {
     github: gitHub,
@@ -12,6 +13,7 @@ const iconTypes = {
     linkedin: linkedin,
     twitter: twitter,
     folder: folder,
+    profile: profile,
 };
 
 const IconComponent = ({ name, ...props}) => {

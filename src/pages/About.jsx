@@ -4,11 +4,19 @@ import IconComponent from "components/lib/Icon";
 import Image from 'next/image';
 import Testmonial from "./Testimonial";
 import items from "../components/lib/testimonialData";
+import { srConfig } from "components/lib/config";
 
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import styled from 'styled-components';
 import Link from "next/link";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
+const StyledBackgroundSection = styled.section`
+
+background-color: #112240;
+
+`;
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -25,6 +33,8 @@ const StyledProjectsSection = styled.section`
     }
   }
   .projects-grid {
+    
+    ${({ theme }) => theme.mixins.resetList};
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 15px;
@@ -35,20 +45,67 @@ const StyledProjectsSection = styled.section`
     }
   }
   .more-button {
+    ${({ theme }) => theme.mixins.button};
     margin: 80px auto 0;
   }
 `;
+
+
 const StyledProject = styled.li`
-.folder {
-  color: var(--green);
-  svg {
-    width: 40px;
-    height: 40px;
-  }
+--dark-navy: #020c1b;
+--navy: #0a192f;
+--light-navy: #112240;
+--lightest-navy: #233554;
+--navy-shadow: rgba(2,12,27,0.7);
+--dark-slate: #495670;
+--slate: #8892b0;
+--light-slate: #a8b2d1;
+--lightest-slate: #ccd6f6;
+--white: #e6f1ff;
+--green: #64ffda;
+--green-tint: rgba(100,255,218,0.1);
+--pink: #f57dff;
+--blue: #57cbff;
+--font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+--font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+--fz-xxs: 12px;
+--fz-xs: 13px;
+--fz-sm: 14px;
+--fz-md: 16px;
+--fz-lg: 18px;
+--fz-xl: 20px;
+--fz-xxl: 22px;
+--fz-heading: 32px;
+--border-radius: 4px;
+--nav-height: 100px;
+--nav-scroll-height: 70px;
+--tab-height: 42px;
+--tab-width: 120px;
+--easing: cubic-bezier(0.645,0.045,0.355,1);
+--transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+--hamburger-width: 30px;
+--ham-before: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
+--ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
+--ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+--ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
+-webkit-font-smoothing: antialiased;
+color: var(--slate);
+font-size: var(--fz-xl);
+line-height: 1.3;
+
+
+list-style: none;
+box-sizing: inherit;
+position: relative;
+cursor: default;
+transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+visibility: visible;
+opacity: 1;
+transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   position: relative;
   cursor: default;
   transition: var(--transition);
-  @media (prefers-reduced-motion: no-preference) {
+  @media {
     &:hover,
     &:focus-within {
       .project-inner {
@@ -61,6 +118,9 @@ const StyledProject = styled.li`
     z-index: 1;
   }
   .project-inner {
+    
+    ${({ theme }) => theme.mixins.boxShadow};
+    ${({ theme }) => theme.mixins.flexBetween};
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -70,29 +130,37 @@ const StyledProject = styled.li`
     background-color: var(--light-navy);
     transition: var(--transition);
   }
+  .folder {
+    color: green;
+    svg {
+      width: 60px;
+      height: 60px;
+
+    }    
   .project-top {
+    ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 35px;
-    
+
     }
-   
-  }
-  .project-links {
-    display: flex;
-    align-items: center;
-    margin-right: -10px;
-    color: var(--light-slate);
-    a {
-      padding: 5px 7px;
-      &.external {
-        svg {
-          width: 22px;
-          height: 22px;
-          margin-top: -4px;
+    .project-links {
+      display: flex;
+      align-items: center;
+      margin-right: -10px;
+      color: var(--light-slate);
+      a {
+        ${({ theme }) => theme.mixins.flexCenter};
+        padding: 5px 7px;
+        &.external {
+          svg {
+            width: 22px;
+            height: 22px;
+            margin-top: -4px;
+          }
         }
-      }
-      svg {
-        width: 20px;
-        height: 20px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -102,6 +170,9 @@ const StyledProject = styled.li`
     font-size: var(--fz-xxl);
     a {
       position: static;
+      &:hover{
+        color: #38bdf8;
+      }; 
       &:before {
         content: '';
         display: block;
@@ -116,7 +187,11 @@ const StyledProject = styled.li`
   }
   .project-description {
     color: var(--light-slate);
-    font-size: 17px;
+    font-size: 15px;
+    font-style: italic;
+    a {
+      ${({ theme }) => theme.mixins.inlineLink};
+    }
   }
   .project-tech-list {
     display: flex;
@@ -136,6 +211,7 @@ const StyledProject = styled.li`
     }
   }
 `;
+
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -158,10 +234,11 @@ const About = () => {
   const GRID_LIMIT = 6;
   const projects = items;
   let projectsToShow = projects;
-
+  const [showMore, setShowMore] = useState(false);
   const ProjectInner = (item) => {
     console.log("got this", item);
-    const [showMore, setShowMore] = useState(false);
+
+
     console.log(showMore);
 
     const firstSix = projects.slice(0, GRID_LIMIT);
@@ -174,19 +251,20 @@ const About = () => {
     const quote = item.quote;
 
     return (
+
       <div className="project-inner">
         <header>
-          <div className="project-top">
-            <div className="folder" >
-              <IconComponent name="folder" />
-            </div>
-          </div>
 
-          <h3 className="project-title">
-            <a href="" target="_blank" rel="noreferrer">
-              {name}
-            </a>
-          </h3>
+          <div className="project-top flex gap-4 items-center py-4">
+            <div className="folder" >
+              <IconComponent name="profile" />
+            </div>
+            <h3 className="project-title">
+              <a href="" target="_blank" rel="noreferrer">
+                {name}
+              </a>
+            </h3>
+          </div>
 
           <div className="project-description" dangerouslySetInnerHTML={{ __html: quote }} />
         </header>
@@ -196,6 +274,7 @@ const About = () => {
             <li>{position}</li>
           </ul>
         </footer>
+
       </div>
     );
   };
@@ -205,8 +284,9 @@ const About = () => {
       <div className="px-2 m-auto gap-8 max-w-4xl exl:max-w-5xl 3xl:max-w-7xl p-5 grid">
         <p className="uppercase text-xl tracking-wide text-[#5651e5] mb-5">Biography</p>
         <div className="grid grid-cols-2 mb-5 col-span-12">
-          <div className="col-start-1 col-span-2 justify-self-start shadow-xl bg-slate-50 rounded-xl p-10 ">
-
+          <StyledBackgroundSection>
+          <div className="col-start-1 col-span-2 justify-self-start shadow-xl rounded-xl p-10 ">
+  
             <p>My name's <span className="text-[#38bdf8]">Michelle</span>.</p>
             <p className="py-2 ">
               Having worked in Banking and Finance, Accounting in consittute years, I'm now working as a data analysis freelancer with a long-term goal towards technical applications in finance.
@@ -215,6 +295,7 @@ const About = () => {
               My job consists in helping companies and researchers to analyse their datasets. I am skilled for most steps: data mining, data pre-processing, data visualization and results communication - analysis. I'm a passionate programmer. I enjoy all things coding and hope to eventually push the boundaries of the current scope. I currently love using python (flask, django, fastAPI, etc)to create helpful applications. Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements.
             </p>
           </div>
+          </StyledBackgroundSection>
           {/* <div className="py-2 w-full h-auto m-auto  shadow-gray-400 rounded-xl flex items-center justify-end p-4 hover:scale-105 case-in duration-300">
                         <Image width="330" height="330" className="rounded-xl" src="" alt="/" />
                     </div> */}
@@ -263,62 +344,34 @@ const About = () => {
         <p className="uppercase text-xl tracking-wide text-[#5651e5]  col-span-12">What clients said about working with me?</p>
         <div className="col-span-12">
           <StyledProjectsSection>
-            <h2>Other Noteworthy Projects</h2>
-
-            <Link className="inline-link archive-link" href="/archive">
-              view the archive
-            </Link>
             <ul className="projects-grid">
-              {projectsToShow &&
-                projectsToShow.map((i, index) => (
+              <TransitionGroup component={null}>
+                {projectsToShow &&
+                  projectsToShow.map((i, index) => (
+                    <CSSTransition
+                      key={index}
+                      classNames="fadeup"
+                      timeout={index >= GRID_LIMIT ? (index - GRID_LIMIT) * 300 : 300}
+                      exit={false}>
+                      <StyledProject key={index} style={{
+                        transitionDelay: `${index >= GRID_LIMIT ? (index - GRID_LIMIT) * 100 : 0}ms`,
+                      }}>
 
-                  <StyledProject key={index} style={{
-                    transitionDelay: `${index >= GRID_LIMIT ? (index - GRID_LIMIT) * 100 : 0}ms`,
-                  }}>
-
-                    {ProjectInner(i)}
-                  </StyledProject>
-
-                ))}
-
+                        {ProjectInner(i)}
+                      </StyledProject>
+                    </CSSTransition>
+                  ))}
+              </TransitionGroup>
             </ul>
+            <div className="py-8">
+            <a className="border-slate-50 border-1 ring-1 rounded-lg py-3 p-3 cursor-pointer mx-auto text-[#83a2b4] hover:text-[#38bdf8] 
+                        " onClick={() => setShowMore(!showMore)}>
+              Show {showMore ? 'Less' : 'More'}
+            </a>
+            </div>
           </StyledProjectsSection>
         </div>
-        <div className="col-span-12">
-          <div className='max-w-[1400px] h-[780px] w-full m-auto py-4 px-4 relative group'>
-            <div className="card w-full h-full rounded-2xl bg-center bg-cover duration-500">
-              <div className="text">
-                <h3 className="name">{items[currentIndex].name}</h3>
-                <i className="position">{items[currentIndex].position}</i>
-                <p className="testimony">{items[currentIndex].quote}</p>
-              </div>
-            </div>
 
-            {/* Left Arrow */}
-            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-              <BsChevronCompactLeft onClick={prevSlide} size={30} />
-            </div>
-            {/* Right Arrow */}
-            <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-              <BsChevronCompactRight onClick={nextSlide} size={30} />
-            </div>
-            <div className='flex top-4 justify-center py-2'>
-              {items.map((slide, slideIndex) => (
-                <div
-                  key={slideIndex}
-                  onClick={() => goToSlide(slideIndex)}
-                  className='text-2xl cursor-pointer'
-                >
-                  <RxDotFilled />
-                </div>
-
-
-              ))}
-            </div>
-          </div>
-
-
-        </div>
       </div>
     </div>
   )

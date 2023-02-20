@@ -17,6 +17,8 @@ import NavBar from 'pages/NavBar';
 import Footer from 'pages/Footer';
 import Social from 'components/lib/social';
 import '../styles/globals.css';
+import { ThemeProvider } from 'styled-components';
+import theme from 'components/lib/styles/theme';
 
 const roboto = Roboto_Condensed({
   weight: '400',
@@ -58,6 +60,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     // Set SideBar hiden on the HomePage only
+
     <div className={roboto.className}   ref={node => {
       // if (node) {
       //   if (node.childNodes[2].childNodes[1].childNodes[0].id === "home") {
@@ -66,7 +69,7 @@ export default function App({ Component, pageProps }) {
       //     setSidebar(true)}
       //   }
     }}>
- 
+ <ThemeProvider theme={theme}>
       <DarkModeProvider>
         <NavBar />
         <Social isHome={true}/>
@@ -114,7 +117,7 @@ export default function App({ Component, pageProps }) {
 
         <Footer />
       </DarkModeProvider>
-   
+      </ThemeProvider>
     </div>
   )
 
