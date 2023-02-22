@@ -51,6 +51,86 @@ module.exports = [
       pinned: true,
       darkCoverURL: true
     },
+    {
+      id: 5,
+      name: "VietnamCovid19Dataset",
+      coverURL: "/assets/portfolios/3.png",
+      description:
+        "A website made to track Covid-19 Cases and Vaccination in Vietnam 2020-2021",
+      githubURL: "https://github.com/Michellehlcn/xmas_card.git",
+      previewURL: "michellehlcn.github.io/VietnamCovid19Dataset/",
+      readmoreURL:"/VietnamCovid19Dataset",
+      tools: ["Python", "Javascript", "Chartjs"],
+      pinned: true,
+      darkCoverURL: true
+    },
+
+    {
+      id: 6,
+      name: "Covid19Hotspot",
+      coverURL: "/assets/portfolios/5.jpg",
+      description:
+        "Mapbox Application. This map was based on the HCDC’s declaration which ordered the closure of suburbs immediately in order to control transmission and mitigate further spread. ",
+      githubURL: "https://github.com/Michellehlcn/xmas_card.git",
+      previewURL: "",
+      readmoreURL:"/Covid19Hotspot",
+      tools: ["Mapbox", "Javascript"],
+      pinned: true,
+      darkCoverURL: true
+    },
+
+    {
+      id: 7,
+      name: "SwingStates",
+      coverURL: "/assets/portfolios/2.jpeg",
+      description:
+        "SwingState. Data analytics.",
+      githubURL: "https://github.com/Michellehlcn/xmas_card.git",
+      previewURL: "",
+      readmoreURL:"/SwingStates",
+      tools: ["Tableau"],
+      pinned: true,
+      darkCoverURL: true
+    },
+    {
+      id: 8,
+      name: "Covid19VietNamDatastudio",
+      coverURL: "/assets/portfolios/1.jpeg",
+      description:
+        "Covid19VietNam. Datastudio",
+      githubURL: "https://github.com/Michellehlcn/xmas_card.git",
+      previewURL: "",
+      readmoreURL:"/DataStudio",
+      tools: ["Datastudio","GoogleAPI"],
+      pinned: true,
+      darkCoverURL: true
+    },
+    {
+      id: 9,
+      name: "Covid19VietNamDatastudio",
+      coverURL: "/assets/portfolios/0.jpeg",
+      description:
+        "SwingState. Data analytics.",
+      githubURL: "https://github.com/Michellehlcn/xmas_card.git",
+      previewURL: "",
+      readmoreURL:"/DataStudio",
+      tools: ["Datastudio","GoogleAPI"],
+      pinned: true,
+      darkCoverURL: true
+    },
+    {
+      id: 10,
+      name: "Covid19VietNamDatastudio",
+      coverURL: "/assets/portfolios/4.png",
+      description:
+        "SwingState. Data analytics.",
+      githubURL: "https://github.com/Michellehlcn/xmas_card.git",
+      previewURL: "",
+      readmoreURL:"/DataStudio",
+      tools: ["Datastudio","GoogleAPI"],
+      pinned: true,
+      darkCoverURL: true
+    },
 ];
    
     /* ..............Other Projects......... */

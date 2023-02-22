@@ -10,8 +10,10 @@ const VietnamCovid19Dataset = () => {
     return (
         <div className="w-full ">
             <div className="w-screen h-[50vh] relative">
-                <div className="absolute top-0 left-0 w-full h-full bg-black/70 z-10">
-                    <Image className="absolute z-1" layout='fill' objectFit="contain" src={Img} alt='/'></Image>
+                <div className="absolute flex flex-row top-0 left-0 w-full h-full bg-black/70 z-10">
+                    <div><Image className="z-1" src={Img} alt='/'></Image></div>
+                    <div><Image className="z-1"  src={Img} alt='/'></Image></div>
+                    <div><Image className="z-1"  src={Img} alt='/'></Image></div>
                 </div>
                 <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
                     <h2 className="py-2">VietnamCovid19 Dataset</h2>
@@ -36,7 +38,7 @@ const VietnamCovid19Dataset = () => {
                 <div className="col-span-4 md:col-span-4 shadow-xl grounded-xl py-4">
                     <div className="p-2">
                         <p className="text-center font-bold pb-2">Technologies</p>
-                        <div className="grid grid-cols-3 md:grid-cols-3">
+                        <div className="grid grid-cols-3 md:grid-cols-3 ">
                             <p className="text-gray-600 py-2 flex items-center col-span-1">
                                 <AiFillCheckCircle className="pr-1" />Python
                             </p>
@@ -61,7 +63,7 @@ const VietnamCovid19Dataset = () => {
                 <div>
                     {/* Description */}
                     <br />
-                    <div className="py-8" >
+                    <div className="py-8 " >
                         <h2>Description</h2>
                         <hr />
                         <p>With all my free time in lockdown, I’ve created website to collate Covid-19 data relevant to Vietnam. You can view it in this link above. This is a beta version which replaces the past tracking projects <code>Covid hotspot</code> and <code>data Studio version</code>. More features will be added in the future.Highlight features such as Dashboard, Timeline Chart of covidcases in 63 states/cities. The webpage also includes additional vaccine tracking on each state and vaccine sources in details.</p>
@@ -69,11 +71,11 @@ const VietnamCovid19Dataset = () => {
 
                         <p >The data was retrieved using <code>Python</code>. It requires several
                             <code>HTML widgets, Javascripts</code> to create interactive graphs, and specific packages to interact with the database. Here is a screenshoot of the page:</p>
-                        <center><img src="https://Michellehlcn.github.io/Homepage/image3.ipeg.png" width="80%"></img></center>
-                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv1.png" width="80%"></img></center>
-                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv2.png" width="80%"></img></center>
+                        <center><img src="https://Michellehlcn.github.io/Homepage/image3.ipeg.png" width="80%" className="py-3"></img></center>
+                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv1.png" width="80%"  className="py-3"></img></center>
+                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv2.png" width="80%"  className="py-3"></img></center>
 
-                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv4.png" width="80%"></img></center>
+                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv4.png" width="80%"  className="py-3"></img></center>
 
                         <br />
                         <h6>Read more</h6>

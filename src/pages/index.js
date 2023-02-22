@@ -2,7 +2,7 @@
 import Main from './Main';
 import About from './About';
 import Skills from '../components/lib/Skills';
-import Portfolios from './Portfolios';
+import Portfolios from './archives/Portfolios';
 import Contact from './Contact';
 
 import Head from 'next/head';
