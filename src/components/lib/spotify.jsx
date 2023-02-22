@@ -23,7 +23,7 @@ const getAccessToken = async () =>{
 };
 
 export const currentlyPlayingSong = async () =>{
-    console.log(`Basic ${Buffer.from(`${SPOTTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString("base64")}`);
+    // console.log(`Basic ${Buffer.from(`${SPOTTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString("base64")}`);
     const { access_token } = await getAccessToken();
     return fetch ("https://api.spotify.com/v1/me/player/currently-playing", {
         headers: {

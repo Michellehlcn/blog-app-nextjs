@@ -26,7 +26,7 @@ const getAccessToken = async () =>{
             refresh_token: SPOTIFY_REFRESH_TOKEN,
         })
     })
-    console.log("[AccessToken]",response.status)
+    // console.log("[AccessToken]",response.status)
     return response.json();
 };
 
@@ -42,14 +42,14 @@ const currentlyPlayingSong = async () =>{
 export default async function handler(req, res) {
     
     const response = await currentlyPlayingSong();
-    console.log(response);
+    // console.log(response);
 
     if (response.status === 204 || response.status > 400) {
         return res.status(200).json({ isPlaying: false });
     }
 
     const song = await response.json();
-    console.log(song);
+    // console.log(song);
     
     /* Extract info */
     const isPlaying = song.is_playing;
@@ -57,7 +57,7 @@ export default async function handler(req, res) {
     const artist = song.item.artists.map((_artist) => _artist.name).join(", ");
     const album = song.item.album.name;
     const albumImageUrl = song.item.album.images[0].url;
-    console.log(JSON.stringify(albumImageUrl));
+    // console.log(JSON.stringify(albumImageUrl));
     const songUrl = song.item.external_urls.spotify;
 
     /* Return the data as JSON */

@@ -1,7 +1,7 @@
 
 import Main from './Main';
 import About from './About';
-import Skills from './Skills';
+import Skills from '../components/lib/Skills';
 import Portfolios from './Portfolios';
 import Contact from './Contact';
 

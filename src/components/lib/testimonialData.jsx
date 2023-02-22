@@ -41,8 +41,55 @@ export const items = [
         name: "Anstel Brands P.",
         position: "Manager",
         quote: "Michelle inderstood this (quite technical) job very easily and knew exactly what i awnted. Was very patient as we worked tgrough a few tech glitches and issues and persisted with completing the job. Thanks!"
-    }
+    },
 
+    {
+        status: "inactive",
+        imgSrc: "",
+        name: "Pamela C. ",
+        position: "Owner & Manager AudienceCyberSecurity",
+        quote: "Michelle is great to work with - diligent in following up and great with communication. She understands what is being asked and is persistent with finding solutions and communicates clearly. I'd recommend Michelle highly."
+    },
+
+    {
+        status: "inactive",
+        imgSrc: "",
+        name: "Christian Michael S.",
+        position: "HealthCare",
+        quote: "Thank you so much for completing my task. You're Amazing providing after task support. Recommended to anyone looking for an A++ service."
+    },
+
+    {
+        status: "inactive",
+        imgSrc: "",
+        name: "Paul H.",
+        position: "Hotel services",
+        quote: "Michelle persisted with what turned out to be a trickier task than I expected. I ended up with an elegant solution and am very happy to recommend her for similar challenges."
+    },
+    
+    {
+        status: "inactive",
+        imgSrc: "",
+        name: "Mitch M.",
+        position: "Data Scientist Student",
+        quote: "Thank you so much Michelle for the task completion and tutoring. You explained everything very clearly and gave me material to help me learn more and understand Python better. Thanks a lot 😊"
+    },
+
+    {
+        status: "inactive",
+        imgSrc: "",
+        name: "Julia C.",
+        position: "Legal Practitioner",
+        quote: "Michelle is a delight to work with and her work is of the highest standard. I am thrilled with the outcome."
+    },
+
+    {
+        status: "inactive",
+        imgSrc: "",
+        name: "Tobias B.",
+        position: "Media Desinger",
+        quote: "A fantastic help, went above and beyond."
+    },
 ];
 
 export default items;
