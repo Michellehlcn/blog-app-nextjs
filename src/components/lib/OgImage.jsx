@@ -12,15 +12,15 @@ function OgImage({ src, alt, darkSrc }){
                 alt={alt}
                 src={src}
                 width={1200}
-                height={630}
+                height={900}
                 placeholder="blur"
                 blurDataURL={src}
                 quality={25}
                 
                 style={{
                     color: "transparent",
-                    width: "100%",
-                    height: "auto",
+                    width: "auto",
+                    height: "100%",
                     objectFit: "cover",
                 
 

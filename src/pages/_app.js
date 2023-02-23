@@ -39,7 +39,7 @@ async function getServerSideProps() {
   };
 }
 const Child1 = React.forwardRef((props, ref) => {
-  return <div ref={ref}>Child1</div> 
+  return <div ref={ref}>Child1</div>
 });
 
 const StyledContent = styled.div`
@@ -50,18 +50,18 @@ const StyledContent = styled.div`
 
 export default function App({ Component, pageProps }) {
   const [Open, setOpen] = useState(true);
-  
+
   const ref = React.useRef(null);
   useEffect(() => {
     console.log(ref.current);
-  },[]);
+  }, []);
 
   const [sideBar, setSidebar] = useState(true);
 
   return (
     // Set SideBar hiden on the HomePage only
 
-    <div className={roboto.className}   ref={node => {
+    <div className={roboto.className} ref={node => {
       // if (node) {
       //   if (node.childNodes[2].childNodes[1].childNodes[0].id === "home") {
       //     setSidebar(false)
@@ -69,14 +69,18 @@ export default function App({ Component, pageProps }) {
       //     setSidebar(true)}
       //   }
     }}>
- <ThemeProvider theme={theme}>
-      <DarkModeProvider>
-        <NavBar />
-        <Social isHome={true}/>
-        <div className='full'>
-        
-          {/* Right Side navBar */}
-          {/* <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
+      <ThemeProvider theme={theme}>
+        <DarkModeProvider>
+          
+            <NavBar />
+            <Social isHome={true} />
+            <div className='mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0'>
+            <div className='flex flex-col justify-between'>
+
+            <div className='full'>
+
+              {/* Right Side navBar */}
+              {/* <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
 
             <div className="text-white py-20 md:flex md:flex-col hidden ">
               <ul className="uppercase">
@@ -106,17 +110,20 @@ export default function App({ Component, pageProps }) {
             </div>
           </div> */}
 
-          {/* Main Content */}
-          <div className=''>
-            <Component {...pageProps} />
+              {/* Main Content */}
+              <div className='mb-auto'>
+                <Component {...pageProps} />
+              </div>
+              </div>
           </div>
+              {/* Left Side Navbar */}
+              {/* <div className='md:col-start-7 md:col-span-1 '><p className='text-white py-20'>right side</p></div> */}
+            </div>
 
-          {/* Left Side Navbar */}
-          {/* <div className='md:col-start-7 md:col-span-1 '><p className='text-white py-20'>right side</p></div> */}
-        </div>
-
-        <Footer />
-      </DarkModeProvider>
+            <Footer />
+                          
+            
+        </DarkModeProvider>
       </ThemeProvider>
     </div>
   )
