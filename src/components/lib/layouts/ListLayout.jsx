@@ -47,12 +47,14 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [] , p
                 <url>
                     {!filteredBlogPosts.length && 'No posts found.'}
                     {displayPosts.map((frontMatter) => {
-                        const {slug, date, title, summary, tags} = frontMatter
+                        const {slug, date, title, summary, tags} = frontMatter;
+                        console.log(typeof tags, tags[0]);
+
                         return (
                             <li key={slug} className="py-4">
                                 <article className='space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0'>
                                     <dl>
-                                        <dt className='sr-only'> Published on</dt>
+                                        <dt className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'> Published on</dt>
                                         <dd className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'>
                                             <time dateTime={date}>{formatDate(date)}</time>
                                         </dd>
@@ -65,8 +67,10 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [] , p
                                                 </Link>
                                             </h3>
                                             <div className='flex flex-wrap'>
-                                                {tags.map((tag) => {
-                                                    <a className=' '>{tag}</a>
+                                                {tags.map( (tag,i) => {
+                                                    return (
+                                                    <a key={i} className="mr-3 text-sm text-[#38bdf8] font-medium uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">{tag}</a>
+                                                    )                                                 
                                                 })}
                                                     
                                             </div>
@@ -81,6 +85,9 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [] , p
                     })}
                 </url>
             </div>
+            {pagination && pagination.totalPages >1 && !searchValue && (
+                <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
+            )}
         </>
     )
 } 

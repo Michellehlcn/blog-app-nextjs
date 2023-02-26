@@ -2467,6 +2467,11 @@
   "resolved" "https://registry.npmjs.org/nanoid/-/nanoid-3.3.4.tgz"
   "version" "3.3.4"
 
+"net@^1.0.2":
+  "integrity" "sha512-kbhcj2SVVR4caaVnGLJKmlk2+f+oLkjqdKeQlmUtz6nGzOpbcobwVIeSURNgraV/v3tlmGIX82OcPCl0K6RbHQ=="
+  "resolved" "https://registry.npmjs.org/net/-/net-1.0.2.tgz"
+  "version" "1.0.2"
+
 "next-auth@^4.19.2":
   "integrity" "sha512-6V2YG3IJQVhgCAH7mvT3yopTW92gMdUrcwGX7NQ0dCreT/+axGua/JmVdarjec0C/oJukKpIYRgjMlV+L5ZQOQ=="
   "resolved" "https://registry.npmjs.org/next-auth/-/next-auth-4.19.2.tgz"
@@ -3590,6 +3595,11 @@
     "postcss-value-parser" "^4.2.0"
     "quick-lru" "^5.1.1"
     "resolve" "^1.22.1"
+
+"tls@^0.0.1":
+  "integrity" "sha512-GzHpG+hwupY8VMR6rYsnAhTHqT/97zT45PG8WD5eTT1lq+dFE0nN+1PYpsoBcHJgSmTz5ceK2Cv88IkPmIPOtQ=="
+  "resolved" "https://registry.npmjs.org/tls/-/tls-0.0.1.tgz"
+  "version" "0.0.1"
 
 "to-fast-properties@^2.0.0":
   "integrity" "sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog=="
