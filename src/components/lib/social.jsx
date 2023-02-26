@@ -43,6 +43,10 @@ const StyledSocialList = styled.ul`
 
       &:hover {
         color: #38bdf8;
+        svg {
+          width: 22px;
+          height:22px;
+        }
       },
       &:focus {
         transform: translateY(-3px);

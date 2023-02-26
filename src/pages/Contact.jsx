@@ -12,7 +12,7 @@ const Contact = () => {
             <div className="max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl m-auto px-2 py-16 w-full">
             <h1 className="text-[#38bdf8] tracking-wide mb-5">Contact</h1>
            
-            <div className="grid lg:grid-cols-5 gap-8 pt-10">
+            <div className="grid lg:grid-cols-5 gap-8 pt-10  text-gray-300 dark:text-gray-200 ">
                     {/* Left */}
                     <div className="col-span-3 lg:col-span-2 w-full h-full bg-[#112240] p-8">
                         <div className="lg:p-4 h-full justify-self-center">

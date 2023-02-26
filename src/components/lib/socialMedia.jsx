@@ -6,6 +6,11 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 const socialMedia = [
     {
+        title: "discord",
+        Icon: BsFillPersonLinesFill,
+        url: "/",
+    },
+    {
         title: "twitter",
         Icon: FaTwitter,
         url: "/",
@@ -21,7 +26,7 @@ const socialMedia = [
         url: "/",
     },
     {
-        title: "github",
+        title: "mail",
         Icon: AiOutlineMail,
         url: "mailto:michellehlcn.au@gmail.com",
     },
@@ -31,7 +36,17 @@ const socialMedia = [
         url: "/",
     },
     {
-        title: "github",
+        title: "youtube",
+        Icon: BsFillPersonLinesFill,
+        url: "/",
+    },
+    {
+        title: "facebook",
+        Icon: BsFillPersonLinesFill,
+        url: "/",
+    },
+    {
+        title: "spotify",
         Icon: BsFillPersonLinesFill,
         url: "/",
     }
