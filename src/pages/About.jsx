@@ -384,31 +384,32 @@ const About = ({ authorDetails }) => {
           <div className="px-2 m-auto gap-8 max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl p-5 grid">
 
             <p className="uppercase text-xl tracking-wide text-[#5651e5] mb-5 col-span-12">Q&A Section</p>
-            <div className="col-span-12 grid gap-8 ">
-              <p className="shadow-xl bg-[#112240] rounded-xl p-10 col-start-1 col-span-2 text-[#38bdf8] ">
+            <div className="col-span-12 grid gap-3 ">
+              <p className="shadow-xl bg-[#112240]  p-10 col-start-1 col-span-2 text-[#38bdf8] ">
                 How did you build this site?</p>
-              <p className="shadow-xl bg-[#112240] rounded-xl p-10 col-start-3 col-span-2 ">
-                I've gotten asked a few times how I went about building the site. For the front end, I used ReactJS. The backend is using FastAPI.
+              <p className="shadow-xl bg-[#112240]  p-10 col-start-3 col-span-2 ">
+                This is the third time I build the my own portfolio. Starting from a very simple plain HTML, CSS and moving to a complex framework like react and fastapi, this time I implemented the new release from NextJS with a rendered server site, decorated by using TailwindCSS.
+                Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites. The reason why I choose this framework because their attractiveness and combined with rendering the Markdown, it made the code looked tight and neat.
               </p>
             </div>
 
-            <div className=" col-span-12 grid gap-8 ">
-              <p className="shadow-xl bg-[#112240] rounded-xl p-10 col-start-1 col-span-2 text-[#38bdf8]  ">
-                How were clients' comments about your services?</p>
-              <p className="shadow-xl bg-[#112240] rounded-xl p-10 col-start-3 col-span-2 ">
-                I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field. Here are a few examples:
-              </p>
-            </div>
 
-            <div className=" col-span-12 grid gap-8">
-              <p className="shadow-xl bg-[#112240] rounded-xl p-10 col-start-1 col-span-2 text-[#38bdf8]  ">
+
+            <div className=" col-span-12 grid gap-3">
+              <p className="shadow-xl bg-[#112240]  p-10 col-start-1 col-span-2 text-[#38bdf8]  ">
                 Why did you choose to work in IT?
               </p>
-              <p className="shadow-xl bg-[#112240] rounded-xl p-10 col-start-3 col-span-2 ">
+              <p className="shadow-xl bg-[#112240] p-10 col-start-3 col-span-2 ">
                 My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then.
               </p>
             </div>
-
+            <div className=" col-span-12 grid gap-3 ">
+              <p className="shadow-xl bg-[#112240]  p-10 col-start-1 col-span-2 text-[#38bdf8]  ">
+                How were clients' comments about your services?</p>
+              <p className="shadow-xl bg-[#112240]  p-10 col-start-3 col-span-2 ">
+                I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field. Here are a few examples below.
+              </p>
+            </div>
             {/* TESTIMONALS */}
             <p className="uppercase text-xl tracking-wide text-[#5651e5]  col-span-12">What clients said about working with me?</p>
             <div className="col-span-12">

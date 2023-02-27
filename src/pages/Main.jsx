@@ -25,7 +25,7 @@ const Main = () => {
                         </span>
                     </a>
                     <p className="py-5 pb-10 text-gray-600 max-w-[70%] mx-auto font-thin">
-                        Hello, My name's Michelle. I'm a software developer - team leader, working in Banking/Trading/Broker Industry, deliver highly liquid, scalable and low-cost trading solutions for swaps trading practitioners in the global derivative markets.
+                        Hello, My name's Michelle. I’m interested in buidling applications, devOps. I’m currently practicing as a software developer and freelancer.I’m looking to collaborate on projects which I can add up the value and further ideas
                     </p>
                     <a className="border-slate-50 border-1 ring-1 rounded-lg py-3 p-3 cursor-pointer mx-auto text-[#83a2b4] hover:text-[#38bdf8]
                         " href="/About" >See more about me.</a>
