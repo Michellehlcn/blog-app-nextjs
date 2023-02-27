@@ -303,47 +303,39 @@ const About = ({ authorDetails }) => {
           <div className="px-2 m-auto gap-8 max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl  grid">
             <div className="grid md:grid-cols-2 grid-cols-1 mb-5 col-span-12 gap-2">
               <StyledBackgroundSection>
-                <div className="col-start-1 col-span-2 justify-self-start shadow-xl rounded-xl p-10 ">
+                <div className="col-start-1 col-span-2 justify-self-start  p-10 ">
 
                   <p>My name's <span className="text-[#38bdf8]">Michelle</span>.</p>
                   <p className="py-2 ">
-                    Having worked in Banking and Finance, Accounting in consittute years, I'm now working as a data analysis freelancer with a long-term goal towards technical applications in finance.
+                    Having worked in Banking and Finance, Accounting in ten years, after a few years of transition spending time in freelancer both data analysis and buidling application I started working in software development in a finance company which was relatively close to my background.
                   </p>
                   <p className="py-2 ">
-                    My job consists in helping companies and researchers to analyse their datasets. I am skilled for most steps: data mining, data pre-processing, data visualization and results communication - analysis. I'm a passionate programmer. I enjoy all things coding and hope to eventually push the boundaries of the current scope. I currently love using python (flask, django, fastAPI, etc)to create helpful applications. Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements.
+                    My responsibility was while providing supports to the team as a team leader, I built and completed electronic trading workflow, facilitate the liquidity of derivatives dealers with the low cost and scale of system, real time execution in the global interest rate swap and options market.
+                  </p>
+                  <p className="py-2 ">
+                    My now and then work as a freelancer consists of helping companies and researchers to analyse their datasets, bulding a micro service application. I enjoy all things coding and hope to eventually push the boundaries of the current scope. My interests are complex frameworks (such as ReactJS, NextJS, Svelte, NodeJs, FastAPI, DJango, Java Springbot) to create helpful applications. 
                   </p>
                 </div>
               </StyledBackgroundSection>
               <StyledBackgroundSection>
-                <div className="col-start-1 col-span-2 justify-self-start shadow-xl rounded-xl p-10 ">
-
-                  <p>My name's <span className="text-[#38bdf8]">Michelle</span>.</p>
+                <div className="col-start-1 col-span-2 justify-self-start p-10 ">
                   <p className="py-2 ">
-                    Having worked in Banking and Finance, Accounting in consittute years, I'm now working as a data analysis freelancer with a long-term goal towards technical applications in finance.
+                  Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements. AWS Clould Service as a professional. 
+                  </p>
+                  <p className="py-2">
+                  I've developed innovative analytical tools and techniques - my own wide range of skillset over years and I believe these various tools will help me accelerate the work, simplify the complex matter and interpret the data in a way everyone can easily understand. Now in turn, let me help your business growth and overcome these hurdles. I'm open for any collaboration.
                   </p>
                   <p className="py-2 ">
-                    My job consists in helping companies and researchers to analyse their datasets. I am skilled for most steps: data mining, data pre-processing, data visualization and results communication - analysis. I'm a passionate programmer. I enjoy all things coding and hope to eventually push the boundaries of the current scope. I currently love using python (flask, django, fastAPI, etc)to create helpful applications. Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements.
-                  </p>
+                  Chech out some of 👉 <a href="/Projects" className="underline cursor-pointer">my latest projects</a>
+                </p>
+                <p className="py-2 ">
+                  Check out my personal 👉 <a href='https://michellehlcn.wordpress.com' target='_blank' className="underline cursor-pointer">blog</a>
+                </p>
                 </div>
               </StyledBackgroundSection>
-              {/* <div className="py-2 w-full h-auto m-auto  shadow-gray-400 rounded-xl flex items-center justify-end p-4 hover:scale-105 case-in duration-300">
-                        <Image width="330" height="330" className="rounded-xl" src="" alt="/" />
-                    </div> */}
+         
             </div>
-            <div className=" mb-5 col-span-12">
-              <StyledBackgroundSection className="p-10">
-                <p className="py-2 ">
-                  I provide my clients with unlimited support, clear explanations, well-documented code, and actionable insights. I've developed innovative analytical tools and techniques - my own wide range of skillset over years and I believe these various tools will help me accelerate the work, simplify the complex matter and interpret the data in a way everyone can easily understand. Now in turn, let me help your business growth and overcome these hurdles.
-                </p>
-                <p className="py-2 underline cursor-pointer">
-                  Chech out some of my latest projects
-                </p>
-                <p className="py-2 underline cursor-pointer">
-                  Check out my personal blog
-                </p>
-              </StyledBackgroundSection>
-            </div>
-
+           
           </div>
         </div>
 

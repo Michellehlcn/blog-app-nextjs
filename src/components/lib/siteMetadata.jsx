@@ -11,7 +11,7 @@ const siteMetadata = {
     // image: '/static/images/avatar.png',
     // socialBanner: '/static/images/twitter-card.png',
     email: 'michellehlcn.au@gmail.com',
-    github: 'https://github.com/michellehlcn',
+    github: 'https://github.com/Michellehlcn',
     twitter: 'https://twitter.com/chisoulofmusic',
     facebook: 'https://facebook.com/hlc.nguyen',
     youtube: 'https://youtube.com/michellehlcn',

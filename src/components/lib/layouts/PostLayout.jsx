@@ -59,7 +59,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                                 <ul className="flex justify-center items-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
                                     <li className="flex items-center space-x-2">
                                         <Image
-                                            src="/assets/me.png"
+                                            src="/assets/me-fix.png"
                                             width={38}
                                             height={38}
                                             alt="avatar"

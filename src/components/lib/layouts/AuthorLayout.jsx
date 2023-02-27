@@ -4,7 +4,7 @@ import { PageSEO } from './../SEO';
 import Link from 'next/link';
 import IconComponent from '../Icon';
 import socialMedia from '../socialMedia';
-
+import Image from 'next/image';
 import styled from 'styled-components';
 
 const StyledSocialList = styled.ul`
@@ -49,13 +49,15 @@ export default function AuthorLayout({ children, frontMatter }) {
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center pt-8">
-            {/* <Image
-              src={avatar}
+
+            <Image
+              src="/assets/me-fix.png"
+              width={160}
+              height={180}
               alt="avatar"
-              width="192px"
-              height="192px"
-              className="h-48 w-48 rounded-full"
-            /> */}
+              className="h-36 w-40 rounded-full"
+            />
+
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
@@ -64,15 +66,14 @@ export default function AuthorLayout({ children, frontMatter }) {
               {socialMedia && socialMedia.slice(0, 10).map((platform, index) => {
                 return (
                   <StyledSocialList>
-              <Link href={platform.url} passHref aria-label={platform.title} target="_blank" rel="noreferrer" >
-                  <IconComponent name={platform.title} />
-               
-            </Link>
-            </StyledSocialList>
-            )})}
-              {/* <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="twitter" href={twitter} /> */}
+                    <Link href={platform.url} passHref aria-label={platform.title} target="_blank" rel="noreferrer" >
+                      <IconComponent name={platform.title} />
+
+                    </Link>
+                  </StyledSocialList>
+                )
+              })}
+         
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>
