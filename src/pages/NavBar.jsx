@@ -139,8 +139,26 @@ const NavBar = () => {
                                 <Link href='https://michellehlcn.wordpress.com' target='_blank'>
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Personal Blog</li>
                                 </Link>
+                                
                             </ul>
-                            <div className="pt-40">
+                            <div className="pt-30">
+                                {/* DarkMode Container */}
+                                <div className="cursor-pointer flex py-10">
+                                    <motion.div
+                                        initial="hidden"
+                                        animate="visible"
+                                        variants={popUp}
+                                        className="cursor-pointer rounded-full z-30 transition active:scale-75 flex gap-3"
+                                        title="Toggle Theme"
+                                        onClick={() => changeDarkMode(!isDarkMode)}
+                                    > {`Dark Mode`}
+                                        {isDarkMode ? (
+                                            <FiMoon className="h-6 w-6 sm:h-7 sm:w-7  select-none transition active:scale-75" />
+                                        ) : (
+                                            <FiSun className="h-6 w-6 sm:h-7 sm:w-7  select-none transition active:scale-75" />
+                                        )}
+                                    </motion.div>
+                                </div>
                                 <p className="uppercase tracking-wildest text-[#38bdf8]">Let's Connect</p>
                                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%] text-gray-700">
                                     <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">

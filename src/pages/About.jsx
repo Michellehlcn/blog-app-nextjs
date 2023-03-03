@@ -305,30 +305,30 @@ const About = ({ authorDetails }) => {
               <StyledBackgroundSection>
                 <div className="col-start-1 col-span-2 justify-self-start  p-10 ">
 
-                  <p>My name's <span className="text-[#38bdf8]">Michelle</span>.</p>
-                  <p className="py-2 ">
+                  <p className="text-gray-500">My name's <span className="text-[#38bdf8]">Michelle</span>.</p>
+                  <p className="py-2 text-gray-500">
                     Having worked in Banking and Finance, Accounting in ten years, after a few years of transition spending time in freelancer both data analysis and buidling application I started working in software development in a finance company which was relatively close to my background.
                   </p>
-                  <p className="py-2 ">
+                  <p className="py-2 text-gray-500">
                     My responsibility was while providing supports to the team as a team leader, I built and completed electronic trading workflow, facilitate the liquidity of derivatives dealers with the low cost and scale of system, real time execution in the global interest rate swap and options market.
                   </p>
-                  <p className="py-2 ">
+                  <p className="py-2 text-gray-500 ">
                     My now and then work as a freelancer consists of helping companies and researchers to analyse their datasets, bulding a micro service application. I enjoy all things coding and hope to eventually push the boundaries of the current scope. My interests are complex frameworks (such as ReactJS, NextJS, Svelte, NodeJs, FastAPI, DJango, Java Springbot) to create helpful applications. 
                   </p>
                 </div>
               </StyledBackgroundSection>
               <StyledBackgroundSection>
                 <div className="col-start-1 col-span-2 justify-self-start p-10 ">
-                  <p className="py-2 ">
+                  <p className="py-2 text-gray-500">
                   Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements. AWS Clould Service as a professional. 
                   </p>
-                  <p className="py-2">
+                  <p className="py-2 text-gray-500">
                   I've developed innovative analytical tools and techniques - my own wide range of skillset over years and I believe these various tools will help me accelerate the work, simplify the complex matter and interpret the data in a way everyone can easily understand. Now in turn, let me help your business growth and overcome these hurdles. I'm open for any collaboration.
                   </p>
-                  <p className="py-2 ">
+                  <p className="py-2 text-gray-500">
                   Chech out some of 👉 <a href="/Projects" className="underline cursor-pointer">my latest projects</a>
                 </p>
-                <p className="py-2 ">
+                <p className="py-2 text-gray-500">
                   Check out my personal 👉 <a href='https://michellehlcn.wordpress.com' target='_blank' className="underline cursor-pointer">blog</a>
                 </p>
                 </div>
@@ -366,6 +366,12 @@ const About = ({ authorDetails }) => {
                         </g>
                       </svg>
                     </div>
+                    <div>
+                    <svg height="48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C12.972 44 4 35.028 4 24S12.972 4 24 4s20 8.972 20 20-8.972 20-20 20zm0-42C11.869 2 2 11.869 2 24s9.869 22 22 22 22-9.869 22-22S36.131 2 24 2zm-6.769 33.25h-5.355l6.345-13.291 2.681 5.533-3.671 7.758zm1.883-16.035a1.001 1.001 0 00-.9-.564h-.003a.998.998 0 00-.899.57L9.389 35.819a.998.998 0 00.902 1.431h7.573c.387 0 .739-.223.905-.572l4.146-8.763a1.002 1.002 0 00-.004-.864l-3.797-7.836zM36.125 35.25h-5.452l-9.912-21.297a1.001 1.001 0 00-.907-.578h-3.603l.004-4.125h7.22l9.864 21.295a1 1 0 00.907.58h1.879v4.125zm1-6.125h-2.24L25.021 7.83a1.003 1.003 0 00-.908-.58h-8.857a1 1 0 00-1 .999l-.006 6.125a1 1 0 001 1.001h3.967l9.912 21.297a1 1 0 00.906.578h7.09a1 1 0 001-1v-6.125a1 1 0 00-1-1z"  fill-rule="evenodd"></path></svg>
+                    </div>
+                    <div>
+                    <svg  height="48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M6 35h24v-2H6v2zm-4-7.073h15v-2H2v2zM22 31v-3.073h-2.916v-2H22V23h2v2.927h3v2h-3V31h-2zm12.4 8.656l2.559-9.675a1.003 1.003 0 00-.967-1.256h-4.384L35.641 20h6.37l-4.007 6.474a1.003 1.003 0 00-.024 1.013c.177.317.512.513.874.513h3.988L34.4 39.656zm11.291-13.111a.999.999 0 00-.89-.545h-4.152l4.007-6.473a1 1 0 00-.85-1.527h-8.805c-.39 0-.744.227-.908.58l-4.956 10.725c-.143.31-.118.671.065.959.185.287.502.461.843.461h4.648l-3.598 13.61a1 1 0 001.776.843L45.61 27.587a1 1 0 00.081-1.042zM28.448 40.084l.301 1.977c-1.511.23-3.088.347-4.686.347-7.21 0-14.51-2.038-14.51-5.933h2c0 1.642 4.76 3.933 12.51 3.933a29.23 29.23 0 004.385-.324zM11.033 9.754C11.033 7.84 16.464 5 23.966 5 31.763 5 37 7.572 37 9.976c0 1.662-5.064 4.077-13 4.077-7.841 0-12.879-2.358-12.998-4.018l.031-.281zM11 13.123c2.768 1.919 7.991 2.93 13 2.93s10.232-1.011 13-2.93V16h2v-6h-.003c0-.008.003-.015.003-.024C39 5.934 32.677 3 23.966 3 15.933 3 9.136 6.047 9.034 9.672L9 9.976c0 .009.003.016.003.024H9v14h2V13.123z" fill-rule="evenodd"></path></svg>
+                    </div>
 
                   </div></div></div></div></div>
 
@@ -373,33 +379,34 @@ const About = ({ authorDetails }) => {
 
         {/* Q&A section */}
         <div id="QA" className="mt-[44px] md:mt-[60px] max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl relative mx-auto p-4 mb-10 text-neutral-200;">
-          <div className="px-2 m-auto gap-8 max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl p-5 grid">
+          <div className="px-2  m-auto gap-8 max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl p-5 grid">
 
             <p className="uppercase text-xl tracking-wide text-[#5651e5] mb-5 col-span-12">Q&A Section</p>
             <div className="col-span-12 grid gap-3 ">
-              <p className="shadow-xl bg-[#112240]  p-10 col-start-1 col-span-2 text-[#38bdf8] ">
-                How did you build this site?</p>
-              <p className="shadow-xl bg-[#112240]  p-10 col-start-3 col-span-2 ">
+              <p className="shadow-xl bg-[#112240]  p-10 text-[#38bdf8] ">
+                How did you build this site?
+              <p className="shadow-xl bg-[#112240]  p-10 text-gray-500">
                 This is the third time I build the my own portfolio. Starting from a very simple plain HTML, CSS and moving to a complex framework like react and fastapi, this time I implemented the new release from NextJS with a rendered server site, decorated by using TailwindCSS.
                 Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites. The reason why I choose this framework because their attractiveness and combined with rendering the Markdown, it made the code looked tight and neat.
               </p>
+              </p>
             </div>
-
-
 
             <div className=" col-span-12 grid gap-3">
-              <p className="shadow-xl bg-[#112240]  p-10 col-start-1 col-span-2 text-[#38bdf8]  ">
-                Why did you choose to work in IT?
-              </p>
-              <p className="shadow-xl bg-[#112240] p-10 col-start-3 col-span-2 ">
+              <p className="shadow-xl bg-[#112240]  p-10 text-[#38bdf8]  ">
+                Why did you choose to work in IT?   
+              <p className="shadow-xl bg-[#112240] p-10  text-gray-500 ">
                 My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then.
               </p>
+              </p>
             </div>
+
             <div className=" col-span-12 grid gap-3 ">
-              <p className="shadow-xl bg-[#112240]  p-10 col-start-1 col-span-2 text-[#38bdf8]  ">
-                How were clients' comments about your services?</p>
-              <p className="shadow-xl bg-[#112240]  p-10 col-start-3 col-span-2 ">
+              <p className="shadow-xl bg-[#112240]  p-10  text-[#38bdf8]  ">
+                How were clients' comments about your services?
+              <p className="shadow-xl bg-[#112240]  p-10  text-gray-500">
                 I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field. Here are a few examples below.
+              </p>
               </p>
             </div>
             {/* TESTIMONALS */}

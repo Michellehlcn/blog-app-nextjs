@@ -13,17 +13,17 @@ const socialMedia = [
     {
         title: "twitter",
         Icon: FaTwitter,
-        url: "/",
+        url: "https://twitter.com/Chisoulofmusic",
     },
     {
         title: "github",
         Icon: FaGithub,
-        url: "/",
+        url: "https://github.com/Michellehlcn",
     },
     {
         title: "linkedin",
         Icon: FaLinkedinIn,
-        url: "/",
+        url: "https://www.linkedin.com/in/huu-linh-chi-nguyen/",
     },
     {
         title: "mail",
