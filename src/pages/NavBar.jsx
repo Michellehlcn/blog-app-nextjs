@@ -108,17 +108,17 @@ const NavBar = () => {
                         <div>
                             <div className="flex w-full items-center justify-between">
                                 <Link href="/" ><p className="uppercase cursor-pointer text-[#38bdf8] font-extrabold"> michellehlcn</p></Link>
-                                <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer">
+                                <div onClick={handleNav} className="text-gray-700 rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer">
                                     <AiOutlineClose />
                                 </div>
                             </div>
                             <div className="border-b border-gray-300 my-4 ">
-                                <p className="w-[85%] md:w-[90%] py-4"> #BeBrave</p>
+                                <p className="w-[85%] md:w-[90%] py-4 text-gray-700"> #BeBrave</p>
 
                             </div>
                         </div>
                         <div className="py-4 flex flex-col">
-                            <ul className="uppercase">
+                            <ul className="uppercase text-gray-700">
                             <Link href="/">
                                 <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineHome/> <span>Home</span></li>
                                 </Link>
@@ -126,7 +126,7 @@ const NavBar = () => {
                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <BsPersonBoundingBox /> About</li>
                                 </Link>
                                
-                                <Link href="/Portfolios">
+                                <Link href="/Projects">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineProject/>Portfolios</li>
                                 </Link>
                                <Link href="/Blog">
@@ -136,13 +136,13 @@ const NavBar = () => {
                                 <Link href="/Contact">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><BiPhoneCall/>Contact</li>
                                 </Link>
-                                <Link href="/Blog">
+                                <Link href='https://michellehlcn.wordpress.com' target='_blank'>
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Personal Blog</li>
                                 </Link>
                             </ul>
                             <div className="pt-40">
                                 <p className="uppercase tracking-wildest text-[#38bdf8]">Let's Connect</p>
-                                <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                                <div className="flex items-center justify-between my-4 w-full sm:w-[80%] text-gray-700">
                                     <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <FaLinkedinIn />
                                     </div>

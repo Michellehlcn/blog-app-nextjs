@@ -62,12 +62,6 @@ export default function App({ Component, pageProps }) {
     // Set SideBar hiden on the HomePage only
 
     <div className={roboto.className} ref={node => {
-      // if (node) {
-      //   if (node.childNodes[2].childNodes[1].childNodes[0].id === "home") {
-      //     setSidebar(false)
-      //   } else {
-      //     setSidebar(true)}
-      //   }
     }}>
       <ThemeProvider theme={theme}>
         <DarkModeProvider>
