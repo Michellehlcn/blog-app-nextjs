@@ -341,7 +341,7 @@ const About = ({ authorDetails }) => {
 
         {/* skillset section */}
         <div id="skillset" >
-          <div class="company-slider_companySlider__o5_2m">
+          <div class="company-slider_companySlider__o5_2m max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl relative mx-auto">
             <div class="jsx-4097728753 slider-container">
               <div class="jsx-4097728753 slider-content-wrapper">
                 <div class="jsx-4097728753">
