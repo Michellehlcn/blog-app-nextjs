@@ -6,7 +6,7 @@ module.exports = [
       description:
         "Facebook Messenger Bot for E-Commercial. Bot Made with Love. It also uses Firebase to store all the user's data.",
       githubURL: "https://github.com/Michellehlcn/SusuBot",
-      previewURL: "luck-ring-level.glitch.me/",
+      previewURL: "https://luck-ring-level.glitch.me/",
       readmoreURL:"/Blog/Facebook-messenger-bot",
       tools: ["Node.js", "FaceBook-graph-api", "Glitch"],
       pinned: true,
@@ -58,7 +58,7 @@ module.exports = [
       description:
         "A website made to track Covid-19 Cases and Vaccination in Vietnam 2020-2021",
       githubURL: "https://github.com/Michellehlcn/VietnamCovid19Dataset",
-      previewURL: "michellehlcn.github.io/VietnamCovid19Dataset/",
+      previewURL: "https://michellehlcn.github.io/VietnamCovid19Dataset/",
       readmoreURL:"/VietnamCovid19Dataset",
       tools: ["Python", "Javascript", "Chartjs"],
       pinned: true,
@@ -72,7 +72,7 @@ module.exports = [
       description:
         "Mapbox Application. This map was based on the HCDC’s declaration which ordered the closure of suburbs immediately in order to control transmission and mitigate further spread. ",
       githubURL: "https://github.com/Michellehlcn/Covid19hotspot",
-      previewURL: "michellehlcn.github.io/Covid19hotspot/",
+      previewURL: "https://michellehlcn.github.io/Covid19hotspot/",
       readmoreURL:"/Covid19Hotspot",
       tools: ["Mapbox", "Javascript"],
       pinned: true,
