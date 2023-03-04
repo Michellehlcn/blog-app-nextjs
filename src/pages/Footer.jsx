@@ -14,13 +14,13 @@ import IconComponent from "../components/lib/Icon";
 const navigationRoutes = [
     "Home",
     "About",
-    "Skills",
-    "Portfolios",
-    "Blogs",
+    "Projects",
+    "Blog",
     "Certificates",
     "Testimonials",
     "Contact",
-    "Rss",
+    "Abstract"
+
 ];
 const StyledSocialList = styled.ul`
   display: flex;
@@ -142,10 +142,10 @@ const Footer = () => {
 
 
                     </div>
-                    <section className="grid grid-cols-3 gap-10 text-sm border-t border-double border-slate-200 dark:border-gray-400/10 p-5 ">
+                    <section className="grid md:grid-cols-4 grid-cols-1 gap-10 text-sm border-t border-double border-slate-200 dark:border-gray-400/10 p-5 ">
                         <div className="flex flex-col gap-4 capitalize">
                             <a className="pb-2 text-black">FEATURES</a>
-                            {navigationRoutes.slice(0, 4).map((text, index) => {
+                            {navigationRoutes.slice(0, 3).map((text, index) => {
                                 return (     
                                     <FooterLink key={index} id={index} route={text} text={text} className="hover:text-black" />
 
@@ -157,12 +157,17 @@ const Footer = () => {
                         <a className="pb-2 text-black">FEATURES</a>
                             {navigationRoutes.slice(4, navigationRoutes.length).map((route, index) => {
                                 let text = route;
-                                if (route === "rss")
-                                    text = "RSS";
+                                if (route === "Projects")
+                                    text = "Portfolios";
                                 return <FooterLink key={index} route={route} text={text} className="hover:text-black"/>;
                             })}
                         </div>
                         <div className="flex flex-col gap-4 capitalize">
+                        <a className="pb-2 text-black">BLOGS</a>
+                        <FooterLink key={0} route={"blog/Facebook-messenger-bot"} text={'facebook-messenger-app'} className="hover:text-black"/>
+                        </div>
+                        <div className="flex flex-col gap-4 capitalize">
+
                        
                           <StyledSocialList>
                           <a className="pb-5 text-black">SOCIAL MEDIA</a>

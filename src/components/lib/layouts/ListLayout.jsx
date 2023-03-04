@@ -20,7 +20,7 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [] , p
         <>
             <div className='divide-y divide-gray-300 dark:divide-gray-700'>
                 <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
-                    <h1 className='text-2xl font-extrabold leading-9 track-tight  dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 text-[#38bdf8] tracking-wide mb-5 pt-20 mt-[44px] md:mt-[60px] flex gap-5'>
+                    <h1 className='text-2xl font-extrabold leading-9 track-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 text-[#38bdf8] tracking-wide mb-5 pt-20 mt-[44px] md:mt-[60px] flex gap-5'>
                     <SiBlogger />{title}
                     </h1>
                     <div className='relative max-w-lg'>

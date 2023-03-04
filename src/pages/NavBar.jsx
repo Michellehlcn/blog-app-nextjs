@@ -141,7 +141,7 @@ const NavBar = () => {
                                 </Link>
                                 
                             </ul>
-                            <div className="pt-30">
+                            <div className="pt-30 text-gray-700">
                                 {/* DarkMode Container */}
                                 <div className="cursor-pointer flex py-10">
                                     <motion.div
