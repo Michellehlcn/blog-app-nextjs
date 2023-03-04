@@ -2,7 +2,7 @@ module.exports = [
     {
       id: 1,
       name: "SuSuBot with Node.js",
-      coverURL: "/assets/theme.jpg",
+      coverURL: "/assets/theme.png",
       description:
         "Facebook Messenger Bot for E-Commercial. Bot Made with Love. It also uses Firebase to store all the user's data.",
       githubURL: "https://github.com/Michellehlcn/SusuBot",
@@ -15,7 +15,7 @@ module.exports = [
     {
       id: 2,
       name: "AutoScraper",
-      coverURL: "/assets/theme.jpg",
+      coverURL: "/assets/portfolios/bot.png",
       description:
         "An automated scalable web scrapping project on 10 auto wholesale websites. Using Python Scrapy.",
       githubURL: "https://github.com/Michellehlcn/Autoscraper",
@@ -28,7 +28,7 @@ module.exports = [
     {
       id: 3,
       name: "React-fastapi-payroll-API",
-      coverURL: "/assets/theme.jpg",
+      coverURL: "/assets/theme.png",
       description:
         "Next Google Docs is a web app which uses draft.js to create a document for you. It also uses Firebase to store all the user's data.",
       githubURL: "https://github.com/Michellehlcn/react-fastapi-payroll-API.git",
@@ -41,7 +41,7 @@ module.exports = [
     {
       id: 4,
       name: "Xmas Card",
-      coverURL: "/assets/theme.jpg",
+      coverURL: "/assets/theme.png",
       description:
         "Mail Conventional XmasCard in Bussiness modest.",
       githubURL: "https://github.com/Michellehlcn/xmas_card.git",
@@ -68,7 +68,7 @@ module.exports = [
     {
       id: 6,
       name: "Covid19Hotspot",
-      coverURL: "/assets/portfolios/5.jpg",
+      coverURL: "/assets/portfolios/5.png",
       description:
         "Mapbox Application. This map was based on the HCDC’s declaration which ordered the closure of suburbs immediately in order to control transmission and mitigate further spread. ",
       githubURL: "https://github.com/Michellehlcn/Covid19hotspot",
@@ -82,7 +82,7 @@ module.exports = [
     {
       id: 7,
       name: "SwingStates",
-      coverURL: "/assets/portfolios/2.jpeg",
+      coverURL: "/assets/portfolios/2.png",
       description:
         "SwingState. Data analytics.",
       githubURL: "",
@@ -95,7 +95,7 @@ module.exports = [
     {
       id: 8,
       name: "Covid19VietNamDatastudio",
-      coverURL: "/assets/portfolios/1.jpeg",
+      coverURL: "/assets/portfolios/1.png",
       description:
         "Covid19VietNam. Datastudio",
       githubURL: "",
