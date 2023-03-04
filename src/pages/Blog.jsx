@@ -20,12 +20,15 @@ export default function Blog ({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
     <PageSEO title={`Blog- ${siteMetadata.author}`} description={siteMetadata.description} />
+    <section className="w-full flex flex-col gap-3 py-5 select-none mb-10  ">
+                   
     <ListLayout
       posts={posts}
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
       title="All Posts"
     />
+    </section>
     </>
   )
 }

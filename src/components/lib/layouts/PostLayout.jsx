@@ -26,7 +26,7 @@ const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-    console.log(authorDetails);
+    // console.log(authorDetails);
     const { slug, fileName, date, title, images, tag } = frontMatter
     return (
         <SectionContainer>

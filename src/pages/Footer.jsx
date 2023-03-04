@@ -107,7 +107,7 @@ const Footer = () => {
         fetch('/api/now-playing')
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
 
                 setData(data)
                 setLoading(false)

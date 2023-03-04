@@ -33,7 +33,7 @@ async function getServerSideProps() {
   ).then((response) => {
     response.json()
   });
-  console.log(todos);
+  // console.log(todos);
   return {
     props: { todos }
   };
@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }) {
 
   const ref = React.useRef(null);
   useEffect(() => {
-    console.log(ref.current);
+    // console.log(ref.current);
   }, []);
 
   const [sideBar, setSidebar] = useState(true);

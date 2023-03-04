@@ -8,7 +8,7 @@ import { srConfig } from "components/lib/config";
 import { MDXLayoutRenderer } from '../components/lib/markdown/MDXComponents';
 import { getFileBySlug } from './../components/lib/markdown/mdx';
 
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { BsChevronCompactLeft, BsChevronCompactRight, BsPersonBoundingBox } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import styled from 'styled-components';
 import Link from "next/link";
@@ -292,7 +292,7 @@ const About = ({ authorDetails }) => {
 
       <div id="bio" >
 
-        <h1 className="text-[#38bdf8] tracking-wide mb-5 pt-20 mt-[44px] md:mt-[60px] ">About</h1>
+        <h1 className="text-[#38bdf8] tracking-wide mb-5 pt-20 mt-[44px] md:mt-[60px] flex gap-5"> <BsPersonBoundingBox />About</h1>
         <p className="uppercase text-xl tracking-wide text-[#5651e5] col-span-12">Biography</p>
         <MDXLayoutRenderer
           layout={frontMatter.layout || DEFAULT_LAYOUT}
@@ -307,13 +307,13 @@ const About = ({ authorDetails }) => {
 
                   <p className="text-gray-500">My name's <span className="text-[#38bdf8]">Michelle</span>.</p>
                   <p className="py-2 text-gray-500">
-                    Having worked in Banking and Finance, Accounting in ten years, after a few years of transition spending time in freelancer both data analysis and buidling application I started working in software development in a finance company which was relatively close to my background.
+                    Having worked in Banking and Finance, Accounting in ten years, after a few years of transition spending time in freelancing both data analysis and buidling application I started working in software development in a finance start-up which was relatively close to my background.
                   </p>
                   <p className="py-2 text-gray-500">
                     My responsibility was while providing supports to the team as a team leader, I built and completed electronic trading workflow, facilitate the liquidity of derivatives dealers with the low cost and scale of system, real time execution in the global interest rate swap and options market.
                   </p>
                   <p className="py-2 text-gray-500 ">
-                    My now and then work as a freelancer consists of helping companies and researchers to analyse their datasets, bulding a micro service application. I enjoy all things coding and hope to eventually push the boundaries of the current scope. My interests are complex frameworks (such as ReactJS, NextJS, Svelte, NodeJs, FastAPI, DJango, Java Springbot) to create helpful applications. 
+                    My now and then work as a freelancer consists of helping companies and researchers to analyse their datasets, bulding a micro service application. I enjoy all things coding and hope to eventually push the boundaries of the current scope. Complex frameworks I have been working are ReactJS, NextJS, Svelte, NodeJs, FastAPI, DJango, Java Springbot. 
                   </p>
                 </div>
               </StyledBackgroundSection>
@@ -383,28 +383,27 @@ const About = ({ authorDetails }) => {
 
             <p className="uppercase text-xl tracking-wide text-[#5651e5] mb-5 col-span-12">Q&A Section</p>
             <div className="col-span-12 grid gap-3 ">
-              <p className="shadow-xl bg-[#112240]  p-10 text-[#38bdf8] ">
+              <p className=" bg-[#112240]  p-10 text-[#38bdf8] ">
                 How did you build this site?
-              <p className="shadow-xl bg-[#112240]  p-10 text-gray-500">
-                This is the third time I build the my own portfolio. Starting from a very simple plain HTML, CSS and moving to a complex framework like react and fastapi, this time I implemented the new release from NextJS with a rendered server site, decorated by using TailwindCSS.
-                Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites. The reason why I choose this framework because their attractiveness and combined with rendering the Markdown, it made the code looked tight and neat.
+              <p className=" bg-[#112240]  p-10 text-gray-500">
+                This is the third time I build my own portfolio. Starting from a very simple plain HTML, CSS and moving forward to a complex framework like react and fastapi, this time I implemented the new features from NextJS with a rendered server site, decorated by using TailwindCSS, deployed to Vercel. The reason why I choose this framework because their attractiveness - it's React-based and combined with flexibility in rendering, it made the code looked tight and neat. While making this website I also received the support from vercel team via Twitter messages. That made me feel more inclusively to the global tech movement.
               </p>
               </p>
             </div>
 
             <div className=" col-span-12 grid gap-3">
-              <p className="shadow-xl bg-[#112240]  p-10 text-[#38bdf8]  ">
+              <p className=" bg-[#112240]  p-10 text-[#38bdf8]  ">
                 Why did you choose to work in IT?   
-              <p className="shadow-xl bg-[#112240] p-10  text-gray-500 ">
+              <p className=" bg-[#112240] p-10  text-gray-500 ">
                 My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then.
               </p>
               </p>
             </div>
 
             <div className=" col-span-12 grid gap-3 ">
-              <p className="shadow-xl bg-[#112240]  p-10  text-[#38bdf8]  ">
+              <p className=" bg-[#112240]  p-10  text-[#38bdf8]  ">
                 How were clients' comments about your services?
-              <p className="shadow-xl bg-[#112240]  p-10  text-gray-500">
+              <p className=" bg-[#112240]  p-10  text-gray-500">
                 I've received really welcomed and nice compliments about my works, and these really gave me great encouragement to continue and improve myself in this field. Here are a few examples below.
               </p>
               </p>

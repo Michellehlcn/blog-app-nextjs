@@ -5,12 +5,13 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import { BiPhoneCall } from 'react-icons/bi';
 
 const Contact = () => {
     return (
         <div id="contact" className="w-full h-fit py-20 tracking-wide">
             <div className="max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl m-auto px-2 py-16 w-full">
-            <h1 className="text-[#38bdf8] tracking-wide mb-5">Contact</h1>
+            <h1 className="text-[#38bdf8] tracking-wide mb-5 flex gap-5"><BiPhoneCall/>Contact</h1>
            
             <div className="grid lg:grid-cols-5 gap-8 pt-10  text-gray-300 dark:text-gray-200 ">
                     {/* Left */}
