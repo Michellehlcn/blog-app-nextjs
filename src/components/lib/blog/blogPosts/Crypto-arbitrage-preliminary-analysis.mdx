@@ -1,0 +1,85 @@
+---
+title: 'Crypto arbitrage: a preliminary analysis'
+date: '2022-02-09'
+tags: ['Python', 'Crypto', 'Bot']
+draft: false
+summary: ' I do think that with the proper architecture and enough effort, it is definitely possible to build an arbitrage bot. Especially when you get into more complex solutions, like 3+way. The other realisation is that the exchanges must be running arbitrage bots against themselves. No doubt, that there is cross exchange collusion in place as well. They help create volume and trading fees. ...'
+---
+
+
+_Title_: Crypto arbitrage: a preliminary analysis
+
+_Author_: Michellehlcn
+
+_Subject_: Tech Post
+
+_Language_: English
+
+_Source_: [michellehlcn.wordpress.com](https://michellehlcn.wordpress.com/2022/02/09/crypto-arbitrage-a-premilinary-analysis/)
+&nbsp;
+## Introduction  
+  
+- People first learn about arbitrage and think they can automate it to make money. In reality, the complexities involved are enormous and the biggest issue is simply that it is almost impossible to predict when the opportunity opens. Therefore, you’re always dealing with what is effectively stale data. The next step is to try to trade faster, which then exposes bugs in APIs and issues with dealing with connection failures. I do think that with the proper architecture and enough effort, it is definitely possible to build an arbitrage bot. Especially when you get into more complex solutions, like 3+way. The other realisation is that the exchanges must be running arbitrage bots against themselves. No doubt, that there is cross exchange collusion in place as well. They help create volume and trading fees.
+
+- To put it simply, if we buy a crypto asset for a lower price on one exchange and sell it for a higher price on another exchange, we have used the crypto arbitrage method. This document gives a few insight on its potential application on crypto currencies.
+
+
+## POSIBILITIES
+
+According to most financial textbooks, it is believed that markets are efficient and hence, that an arbitrage opportunity simply can’t occur. Unfortunately, the reality is far from theory and traders have found a way to exploit it. Crypto currencies are bought and sold on different exchanges. Basically it is like a bank, but for crypto. The price is not always exactly the same on 2 exchanges. It is thus possible to buy a crypto where the price is low, and sell it instantly where the price is high to realise a gain without taking any risk. There are many reason behind the occurrence of a crypto arbitrage and I’ve extracted the most notable ones:
+
+Liquidity variance across several exchanges – Most of the exchanges have their own order books that tend to be different with varying liquidity for a particular asset. For those new to trading, an order book is an automated list of current sell and buy positions for a specified asset. For example, if we are buying Bitcoin, it might be easier to convert it into cash on a particular exchange without causing a loss. This can easily have something to do with the order book of an exchange. If one exchange has a wide order book and the other a more filled one, it would be wise for us to buy our asset on the latter, as the former would end up in us paying a higher price.
+
+Different types of exchanges – Not all exchanges are the same. Some of them are most suitable for retail investors while others are built with a preference for institutional ones. If we take a look at the varying behaviours and preferences of these two types of traders, a crypto arbitrage opportunity occurs. For example, the institutional traders tend to have gaps between their large limit market orders while the retail traders don’t. This gap allows us to buy a particular asset on the retail trader exchange and then commit to a sell position on the other one. With the power of algorithmic trading, most arbitrages can offer an instantaneous profit.
+
+Withdrawal and deposit times vary across exchanges -As exchanges don’t have the same deposit and withdrawal times the opportunities for the crypto arbitrage grow. if we could move our fiat and crypto assets instantaneously, the market differences between several exchange s would flatten out. This means that the exchanges with a faster transfer time catch up with the market sooner wile the other ones slowly crawl up to the updated market sentiment levels.
+
+The supply and demand vary across countries – As countries can have different supply and demand levels, we can exploit the crypto arbitrage opportunities
+
+Foreign currency rates – For example, if we’re trading Lithium, the varying currency exchange rates
+
+
+## TYPE OF ARBITRAGES
+(i) Spatial arbitrage – This arbitrage is the most common one. It allows us to buy a crypto asset on one exchange and then transfer it to the other exchange while selling it for a higher price. Issues like costs, transfer times and spreads, make this type of arbitrage not as valuable. Basically, by the time we transfer a crypto to another exchange, chances are hat the price has already changed. The good side of this arbitrage tactic is that it’s quite easy to do.
+
+2 Methods:
+
+Long/short on exchange 1, transfer crypto/fiat to exchange 2, then short/long
+Long and short on 2 exchanges, then transfer the long to the other exchange, and cover the shorts.
+(ii) Spatial arbitrage without transferring – This method is used in order to eliminate the transfer time and cost. It is also preferred by most crypto day trading arbitrageurs
+
+(iii) Triangular arbitrage – The tactic utilises a single or more exchanges while exploiting the differences between the trading pair. As many exchanges have a great variety of markets with different currency options, many opportunities can be utilised for a triangular arbitrage. See more on AlgoTrading101
+
+## LIMITATION
+
+Of course the naive example described above encounters several limit in real life. Here is a list of them:
+
+Price differences are rare
+Transaction have fees: each time you buy, sell or transfer crypto, fees apply. In most of the exchanges there is a 0.25% fee to buy and sell
+Prices evolve quickly: buy the time you discovered a price discrepancy, prices are already different. This is called Slippage Risk. Doing arbitrage without an automatic bot is impossible
+Crypto transfer takes time: you can buy and sell crypto instantly, however it takes time to send it to another exchange or to/from you bank account
+Concentration risk: if it is always the same exchange that is more expensive, all your money will ends up in it. You won’t be able to do any new transaction until you rebalance funds.
+Price volatility: let’s say you have an efficient arbitrage algorithm that makes 1% a day. If the crypto price drops down when you have some, your loss will probably higher than your gains.
+
+## THE PLAN
+
+The next step simulates an arbitrage algorithm to assess the potential gain.
+
+Method 1: This method involves using an exchange API from Binance to compare the prices of the asset. The fees are set to zero. The possibility of use only one exchange allows to reduce the commission fee.
+
+Running the crypto arbitrage bot. See the full code over here. The basic framework as shown as below:
+To get the data, first of all, we can use the Binance Websocket to stream all market tickers of Binance. The endpoint is defined by the variable socket_spot, the stream message is called in the on_message function. The on_error and on_close functions are to print an error and close message. The arbitrage_opportunity is to insert the strategy of the arbitrage. Here is just shows an ideal case without optimization, where the pair A: is sold to buy the pair B, then B is sold to buy C, and finally from C restore A. The variable hold_A it is equal to 1 just to obtain the gain, if gain>1 the arbitrage loop involves a profit. Once the artbirage_opportunity return a gain, it is passed into arbitrage_execute function. At the moment, the size of order is equal zero as shown on my balance, another way to test the code it just skip/mute this part, otherwise it would come to this error:
+
+
+Method 2: The second method involves using data pulling APIs and websites than can scan across multiple exchanges, i.e.CoinGecko or CoinMarketCap. This method is less accurate than the previous one but is vastly scalable.
+
+See more on Wardbradt – Peregrine a Python library detects arbitrage opportunities across 131 cryptocurrency exchange in 50 countries
+
+##### CONCLUSION
+
+Please keep in mind that Trading fees and Timing are the most challenges to overcome. First, the fees to trade cryptocurrencies can be very high. This means that any imbalances between cryptos must be significant in order to be profitable . At the same time, the strategy will be most effective if automated and set to run periodically or around the clock.
+
+Hope you enjoy the reading. If you have any suggestions on how to improve the strategy itself, send a message or leave a comment.
+###### Feb 2022
+
+

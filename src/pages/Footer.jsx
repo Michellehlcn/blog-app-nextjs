@@ -154,7 +154,9 @@ const Footer = () => {
                         <div className="flex flex-col gap-4 capitalize">
                         <a className="pb-2 text-[#38bdf8]">BLOGS</a>
                         <FooterLink key={0} route={"blog/Facebook-messenger-bot"} text={'facebook-messenger-app'} className="hover:text-black"/>
+                        <FooterLink key={0} route={"blog/Crypto-arbitrage-preliminary-analysis"} text={'crypto-arbitrage-preliminary-analysis'} className="hover:text-black"/>
                         </div>
+                        
                         <div className="flex flex-col gap-4 capitalize">                
                           <StyledSocialList>
                           <a className="pb-5 text-[#38bdf8]">SOCIAL MEDIA</a>
