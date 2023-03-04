@@ -20,7 +20,7 @@ module.exports = [
         "An automated scalable web scrapping project on 10 auto wholesale websites. Using Python Scrapy.",
       githubURL: "https://github.com/Michellehlcn/Autoscraper",
       previewURL: "",
-      readmoreURL:"",
+      readmoreURL: "",
       tools: ["Python", "Scrapy", "BeautifulSoup"],
       pinned: true,
       darkCoverURL: true
@@ -32,8 +32,8 @@ module.exports = [
       description:
         "Next Google Docs is a web app which uses draft.js to create a document for you. It also uses Firebase to store all the user's data.",
       githubURL: "https://github.com/Michellehlcn/react-fastapi-payroll-API.git",
-      previewURL: "https://michellehlcn.wordpress.com/2022/05/31/api-web-application/",
-      readmoreURL:"",
+      previewURL: "",
+      readmoreURL:"https://michellehlcn.wordpress.com/2022/05/31/api-web-application/",
       tools: ["React", "FastAPI", "RestAPI", "Auth", "Docker", "PostgreSQL" ],
       pinned: true,
       darkCoverURL: true

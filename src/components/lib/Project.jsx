@@ -1,5 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { MdOutlineLink, MdReadMore } from "react-icons/md";
+import { BiLinkExternal } from 'react-icons/bi';
 import Link from "next/link";
 import OgImage from "./OgImage";
 
@@ -25,7 +26,7 @@ export default function Project({ project }) {
                         return (
                             <span
                                 key={`${tool}-${index}`}
-                                className="bg-gray-100 bg-darkPrimary text-gray-500 rounded px-2 py-1 text-xs"
+                                className="bg-gray-100  text-gray-500 rounded px-2 py-1 text-xs"
                             >
                                 {tool}
                             </span>
@@ -50,21 +51,23 @@ export default function Project({ project }) {
                             rel="noopener noreferrer"
                             className="text-gray-500 hover:text-black dark:hover:text-white"
                         >
-                            <MdOutlineLink className="w-6 h-6 hover:scale-110 active:scale-90 transition-all" />
-                           
+                            <span className="w-6 h-6 hover:scale-110 active:scale-90 transition-all" >DEMO</span>
+
                         </Link>
                     )}
-                     <Link href={project.readmoreURL} passHref
-                        target="_blank"
-                        title="Source Code on Github "
-                        rel="noopener noreferrer"
-                        className="text-gray-500 hover:text-black dark:hover:text-white">
-                         <MdReadMore className="w-6 h-6 hover:scale-110 active:scale-90 transition-all" />
-                    </Link>
+                    {project.readmoreURL && (
+                        <Link href={project.readmoreURL} passHref
+                            target="_blank"
+                            title="Source Code on Github "
+                            rel="noopener noreferrer"
+                            className="text-gray-500 hover:text-black dark:hover:text-white">
+                            <BiLinkExternal className="w-6 h-6 hover:scale-110 active:scale-90 transition-all" />
+                        </Link>
+                    )}
                 </div>
             </div>
         </div>
 
-    
+
     )
 }
