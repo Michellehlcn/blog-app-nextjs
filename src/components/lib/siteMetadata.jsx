@@ -5,9 +5,9 @@ const siteMetadata = {
     description: 'A blog created with Next.js and Tailwind.css',
     language: 'en-au',
     theme: 'system', // system, dark or light
-    // siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+    siteUrl: 'https://blog2023-michellehlcn.vercel.app',
     // siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-    // siteLogo: '/static/images/logo.png',
+    siteLogo: '/assets/portfolios/bot.png',
     // image: '/static/images/avatar.png',
     // socialBanner: '/static/images/twitter-card.png',
     email: 'michellehlcn.au@gmail.com',
