@@ -2,7 +2,7 @@ module.exports = [
     {
       id: 1,
       name: "SuSuBot with Node.js",
-      coverURL: "/assets/theme.png",
+      coverURL: "/assets/portfolios/susushop.png",
       description:
         "Facebook Messenger Bot for E-Commercial. Bot Made with Love. It also uses Firebase to store all the user's data.",
       githubURL: "https://github.com/Michellehlcn/SusuBot",
@@ -14,6 +14,19 @@ module.exports = [
     },
     {
       id: 2,
+      name: "Arbitrage-binance",
+      coverURL: "/assets/portfolios/bot.png",
+      description:
+        "Triangle Arbitrage on Binance (Testnet) with Python",
+      githubURL: "https://github.com/Michellehlcn/Arbitrage-binance",
+      previewURL: "",
+      readmoreURL:"",
+      tools: ["python", "Binance (Testnet)"],
+      pinned: true,
+      darkCoverURL: true
+    },
+    {
+      id: 3,
       name: "AutoScraper",
       coverURL: "/assets/portfolios/bot.png",
       description:
@@ -26,9 +39,9 @@ module.exports = [
       darkCoverURL: true
     },
     {
-      id: 3,
+      id: 4,
       name: "React-fastapi-payroll-API",
-      coverURL: "/assets/theme.png",
+      coverURL: "/assets/portfolios/bot.png",
       description:
         "Next Google Docs is a web app which uses draft.js to create a document for you. It also uses Firebase to store all the user's data.",
       githubURL: "https://github.com/Michellehlcn/react-fastapi-payroll-API.git",
@@ -39,7 +52,7 @@ module.exports = [
       darkCoverURL: true
     },
     {
-      id: 4,
+      id: 5,
       name: "Xmas Card",
       coverURL: "/assets/theme.png",
       description:
@@ -52,7 +65,7 @@ module.exports = [
       darkCoverURL: true
     },
     {
-      id: 5,
+      id: 6,
       name: "VietnamCovid19Dataset",
       coverURL: "/assets/portfolios/3.png",
       description:
@@ -66,7 +79,7 @@ module.exports = [
     },
 
     {
-      id: 6,
+      id: 7,
       name: "Covid19Hotspot",
       coverURL: "/assets/portfolios/5.png",
       description:
@@ -80,7 +93,7 @@ module.exports = [
     },
 
     {
-      id: 7,
+      id: 8,
       name: "SwingStates",
       coverURL: "/assets/portfolios/2.png",
       description:
@@ -93,7 +106,7 @@ module.exports = [
       darkCoverURL: true
     },
     {
-      id: 8,
+      id: 9,
       name: "Covid19VietNamDatastudio",
       coverURL: "/assets/portfolios/1.png",
       description:
@@ -102,6 +115,19 @@ module.exports = [
       previewURL: "https://michellehlcn.github.io/Covid19VietnamDataset/",
       readmoreURL:"/DataStudio",
       tools: ["Datastudio","GoogleAPI"],
+      pinned: true,
+      darkCoverURL: true
+    },
+    {
+      id: 10,
+      name: "Stock Trading App",
+      coverURL: "/assets/portfolios/bot.png",
+      description:
+        "An experiment of Stock tracking Dashboard, Fast API, SQL, Trading View",
+      githubURL: "https://github.com/Michellehlcn/StockTradingApp",
+      previewURL: "",
+      readmoreURL:"",
+      tools: ["Python","Heroku", "FastAPI", "TradingView"],
       pinned: true,
       darkCoverURL: true
     },
