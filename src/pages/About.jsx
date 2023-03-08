@@ -322,7 +322,7 @@ const About = ({ authorDetails }) => {
               <StyledBackgroundSection>
                 <div className="col-start-1 col-span-2 justify-self-start p-10 ">
                   <p className="py-2 text-gray-500">
-                  Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements. AWS Clould Service as a professional. 
+                  Current focus is the creations of automated solutions for ensuring restructured platforms perform at least an order of magnitude better, going forward. This includes implementation of CI/CD pipelines and overall workflow improvements, AWS Clould Service as a professional, Blockchain.
                   </p>
                   <p className="py-2 text-gray-500">
                   I've developed innovative analytical tools and techniques - my own wide range of skillset over years and I believe these various tools will help me accelerate the work, simplify the complex matter and interpret the data in a way everyone can easily understand. Now in turn, let me help your business growth and overcome these hurdles. I'm open for any collaboration.
