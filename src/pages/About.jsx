@@ -387,7 +387,12 @@ const About = ({ authorDetails }) => {
               <p className=" bg-[#112240]  p-10 text-[#38bdf8]  ">
                 Why did you choose to work in IT?   
               <p className=" bg-[#112240] p-10  text-gray-500 ">
-                My background was Finance but what I can say is the life guiding me through. In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. I've learnt coding and picked up projects since then.
+                How did I go from finance to software engineer, it was definitely not an overnight story.
+                My background was in Finance but what I can say is the life guiding me through. 
+                In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. 
+                I've learnt coding and picked up projects since then.
+                I found these were actually so cool and as the matter of the fact that you don't need a permission to do what you want to do in life.
+                My own highschool girl achieved the highest ranking in Programming Pascal Class had fueled my confidence optimistically to keep going. 
               </p>
               </p>
             </div>
