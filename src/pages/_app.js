@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
 
 import { Inter } from '@next/font/google';
 import { Roboto_Condensed } from '@next/font/google';
@@ -19,6 +21,7 @@ import Social from 'components/lib/social';
 import '../styles/globals.css';
 import { ThemeProvider } from 'styled-components';
 import theme from 'components/lib/styles/theme';
+import * as gtag from './../components/lib/gtag';
 
 const roboto = Roboto_Condensed({
   weight: '400',
@@ -33,14 +36,12 @@ async function getServerSideProps() {
   ).then((response) => {
     response.json()
   });
-  // console.log(todos);
+
   return {
     props: { todos }
   };
 }
-const Child1 = React.forwardRef((props, ref) => {
-  return <div ref={ref}>Child1</div>
-});
+
 
 const StyledContent = styled.div`
   display: flex;
@@ -49,77 +50,57 @@ const StyledContent = styled.div`
 `;
 
 export default function App({ Component, pageProps }) {
-  const [Open, setOpen] = useState(true);
+  const router = useRouter();
 
-  const ref = React.useRef(null);
   useEffect(() => {
-    // console.log(ref.current);
-  }, []);
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
 
-  const [sideBar, setSidebar] = useState(true);
+    router.events.on("routerChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
-    // Set SideBar hiden on the HomePage only
+    <>
 
-    <div className={roboto.className} ref={node => {
-    }}>
-      <ThemeProvider theme={theme}>
-        <DarkModeProvider>
-          
+      {/* -- Google tag (gtag.js) */}
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-5TSZKBC21C"></Script>
+      <Script id='google-analytics' strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5TSZKBC21C', {
+          page_path: window.location.pathname,
+        });
+        `,
+        }}
+      />
+      <div className={roboto.className} ref={node => {
+      }}>
+        <ThemeProvider theme={theme}>
+          <DarkModeProvider>
             <NavBar />
             <Social isHome={true} />
             <div className='mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0'>
-            <div className='flex flex-col justify-between'>
-
-            <div className='full'>
-
-              {/* Right Side navBar */}
-              {/* <div className={sideBar ? 'md:col-start-2 md:col-span-1 sticky': 'hidden'}>
-
-            <div className="text-white py-20 md:flex md:flex-col hidden ">
-              <ul className="uppercase">
-                <Link href="/">
-                  <li  className="py-4 text-sm flex gap-3 items-center"><AiOutlineHome /> <span>Home</span></li>
-                </Link>
-                <Link href="/About">
-                  <li  className="py-4 text-sm flex gap-3 items-center"> <BsPersonBoundingBox /> About</li>
-                </Link>
-                <Link href="/Skills">
-                  <li  className="py-4 text-sm flex gap-3 items-center"> <GiSkills />Skills</li>
-                </Link>
-                <Link href="/Portfolios">
-                  <li className="py-4 text-sm flex gap-3 items-center"><AiOutlineProject />Portfolios</li>
-                </Link>
-                <Link href="/Blog">
-                  <li  className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Blog</li>
-                </Link>
-                <Link href="/">
-                  <li  className="py-4 text-sm flex gap-3 items-center"><FaComments />Testimonals</li>
-                </Link>
-                <Link href="/Contact">
-                  <li  className="py-4 text-sm flex gap-3 items-center"><BiPhoneCall />Contact</li>
-                </Link>
-              </ul>
-
-            </div>
-          </div> */}
-
-              {/* Main Content */}
-              <div className='mb-auto'>
-                <Component {...pageProps} />
+              <div className='flex flex-col justify-between'>
+                <div className='full'>
+                  {/* Main Content */}
+                  <div className='mb-auto'>
+                    <Component {...pageProps} />
+                  </div>
+                </div>
               </div>
-              </div>
-          </div>
-              {/* Left Side Navbar */}
-              {/* <div className='md:col-start-7 md:col-span-1 '><p className='text-white py-20'>right side</p></div> */}
             </div>
-
             <Footer />
-                          
-            
-        </DarkModeProvider>
-      </ThemeProvider>
-    </div>
+          </DarkModeProvider>
+        </ThemeProvider>
+      </div>
+    </>
   )
 
 }
