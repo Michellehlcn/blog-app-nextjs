@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 import { Inter } from '@next/font/google';
 import { Roboto_Condensed } from '@next/font/google';
@@ -92,6 +93,7 @@ export default function App({ Component, pageProps }) {
                   {/* Main Content */}
                   <div className='mb-auto'>
                     <Component {...pageProps} />
+                    <Analytics />
                   </div>
                 </div>
               </div>
