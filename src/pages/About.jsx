@@ -392,7 +392,7 @@ const About = ({ authorDetails }) => {
                 In 2020, I was having an injury and in the middle of Covid-19 pandemic I lost a job, I started to work online which didn't require my physical ability. 
                 I've learnt coding and picked up projects since then.
                 I found these were actually so cool and as the matter of the fact that you don't need a permission to do what you want to do in life.
-                My own highschool girl achieved the highest ranking in Programming Pascal Class had fueled my confidence optimistically to keep going. 
+                A highschool girl past over 15 years achieved the highest ranking in Programming Pascal Class didn't expect this was something that she can do. This had fueled my confidence optimistically to keep going and exploring. 
               </p>
               </p>
             </div>
