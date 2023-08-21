@@ -71,11 +71,11 @@ const VietnamCovid19Dataset = () => {
 
                         <p >The data was retrieved using <code>Python</code>. It requires several
                             <code>HTML widgets, Javascripts</code> to create interactive graphs, and specific packages to interact with the database. Here is a screenshoot of the page:</p>
-                        <center><img src="https://Michellehlcn.github.io/Homepage/image3.ipeg.png" width="80%" className="py-3"></img></center>
-                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv1.png" width="80%"  className="py-3"></img></center>
-                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv2.png" width="80%"  className="py-3"></img></center>
+                        <center><Image src="https://Michellehlcn.github.io/Homepage/image3.ipeg.png" width="80%" className="py-3" alt=""></Image></center>
+                        <center><Image src="https://Michellehlcn.github.io/Homepage/images/cv1.png" width="80%"  className="py-3" alt=""></Image></center>
+                        <center><Image src="https://Michellehlcn.github.io/Homepage/images/cv2.png" width="80%"  className="py-3" alt=""></Image></center>
 
-                        <center><img src="https://Michellehlcn.github.io/Homepage/images/cv4.png" width="80%"  className="py-3"></img></center>
+                        <center><Image src="https://Michellehlcn.github.io/Homepage/images/cv4.png" width="80%"  className="py-3" alt=""></Image></center>
 
                         <br />
                         <h6>Read more</h6>

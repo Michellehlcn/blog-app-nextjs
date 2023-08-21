@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { BiPhoneCall } from 'react-icons/bi';
+import Image from "next/image";
 
 const Contact = () => {
     return (
@@ -18,7 +19,7 @@ const Contact = () => {
                     <div className="col-span-3 lg:col-span-2 w-full h-full bg-[#112240] p-8">
                         <div className="lg:p-4 h-full justify-self-center">
                             <div>
-                                <img className="rounded-xl hover:scale-105 ease-in duration-300" src="" />
+                                <Image className="rounded-xl hover:scale-105 ease-in duration-300" src="" alt="" />
                             </div>
 
                             <div>
