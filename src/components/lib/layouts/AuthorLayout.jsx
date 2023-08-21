@@ -63,10 +63,9 @@ export default function AuthorLayout({ children, frontMatter }) {
               {/* <SocialIcon kind="mail"  /> */}
               {socialMedia && socialMedia.slice(0, 10).map((platform, index) => {
                 return (
-                  <StyledSocialList>
-                    <Link href={platform.url} passHref aria-label={platform.title} target="_blank" rel="noreferrer" >
+                  <StyledSocialList key={platform.title}>
+                    <Link  href={platform.url} passHref aria-label={platform.title} target="_blank" rel="noreferrer" >
                       <IconComponent name={platform.title} />
-
                     </Link>
                   </StyledSocialList>
                 )
