@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 
-import { Inter } from '@next/font/google';
-import { Roboto_Condensed } from '@next/font/google';
+import { Inter } from 'next/font/google';
+import { Roboto_Condensed } from 'next/font/google';
 
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { BsPersonBoundingBox } from "react-icons/bs";
