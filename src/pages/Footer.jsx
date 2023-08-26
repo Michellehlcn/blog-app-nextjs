@@ -96,7 +96,7 @@ function FooterLink({ route, text }) {
     )
 }
 async function handler(req, res, next) {
-    const response = await fetch (" https://google.com", {
+    const response = await fetch ("https://google.com", {
         method: "GET",
         headers: {
             accept: "application/json",
@@ -113,8 +113,10 @@ const Footer = () => {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
   
-    setInterval(() => {fetch('/api/ping')}, 30000000)
-
+    //setInterval(() => {handler()}, 300000)
+    setInterval(() => {    
+        fetch('https://ginger-tiny-fine.glitch.me')
+            .then((res) => console.log(res.status))}, 30000)
     useEffect(() => {
         setLoading(true)
         fetch('/api/now-playing')
