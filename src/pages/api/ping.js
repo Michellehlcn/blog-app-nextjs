@@ -1,6 +1,6 @@
 //https://ginger-tiny-fine.glitch.me
 export default async function handler(req, res) {
-    const response = await fetch (" https://google.com", {
+    const response = await fetch ("https://ginger-tiny-fine.glitch.me/", {
         method: "GET",
         headers: {
             accept: "application/json",

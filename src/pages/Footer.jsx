@@ -113,7 +113,7 @@ const Footer = () => {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
   
-    setInterval(() => {fetch('/api/now-playing')}, 30000000)
+    setInterval(() => {fetch('/api/ping')}, 30000000)
 
     useEffect(() => {
         setLoading(true)
