@@ -58,7 +58,7 @@ function WhenPlaying({ song }) {
             <Link href={song.songUrl} passJref className="flex items-center justify-between bg-gray-200 dark:bg-darkSecondary p-3 sm:p-4 rounded-sm">
                     <div className="flex items-center gap-2">
                         <div className="w-30 h-30">
-                            <img
+                            <Image
                                 alt={song.title}
                                 src={song.albumImageUrl}
                                 width={40}
@@ -95,10 +95,25 @@ function FooterLink({ route, text }) {
         </Link>
     )
 }
+async function handler(req, res, next) {
+    const response = await fetch (" https://google.com", {
+        method: "GET",
+        headers: {
+            accept: "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+    });
+    console.log("[Ping]",response.status)
+    // if (response.status) {
+    //     return res.status(200);
+    // };
+};
 const Footer = () => {
     //const { data, error } = useSWR(, fetcher);
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
+  
+    setInterval(() => {fetch('/api/now-playing')}, 30000000)
 
     useEffect(() => {
         setLoading(true)
