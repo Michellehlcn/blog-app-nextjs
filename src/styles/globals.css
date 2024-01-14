@@ -11,7 +11,7 @@ html{
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide 
   }
   body.dark {
-    @apply bg-[#dff9fb] border-slate-50 text-slate-400
+    @apply bg-[#000000] border-slate-50 text-[#ffffff]
  
   }
   h1, h2, h3, h4, h5, h6 {

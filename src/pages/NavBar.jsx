@@ -48,29 +48,32 @@ const NavBar = () => {
 
     return (
         <div id="navbar">
-            <div className="shadow-xl fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10  supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75 h-10 ease-in-out  dark:bg-darkPrimary dark:text-gray-100">
+            <div className="shadow-xl fixed top-0 z-40 w-full backdrop-blur inline-flex transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10  supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75 h-20 ease-in-out  dark:bg-darkPrimary dark:text-gray-100 text-xl">
                 <div className="w-full h-full mx-auto p-2 grid grid-cols-6 items-center px-2 ">
                     <div className="col-start-2 col-span-4 flex justify-center">
-                        <Link href="/" ><p className="uppercase cursor-pointer hidden md:flex text-xs"> michellehlcn</p></Link>
+                        <Link href="/" ><p className="uppercase cursor-pointer hidden md:flex "> michellehlcn</p></Link>
                         <div>
                             <ul className="hidden md:flex">
                                 <Link href='/'>
-                                    <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Home</li>
+                                    <li className="ml-10 uppercase hover:text-[#696969] ">Home</li>
                                 </Link>
                                 <Link href='/About'>
-                                    <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">About</li>
+                                    <li className="ml-10 uppercase hover:text-[#696969] ">About</li>
                                 </Link>
                                 <Link href='/Projects'>
-                                    <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Portfolios</li>
+                                    <li className="ml-10  uppercase hover:text-[#696969] ">Portfolios</li>
                                 </Link>
                                 <Link href='/Blog'>
-                                    <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Blog</li>
+                                    <li className="ml-10 uppercase hover:text-[#696969] ">Blog</li>
+                                </Link>
+                                <Link href='/Gallery'>
+                                    <li className="ml-10  uppercase hover:text-[#696969]">Gallery</li>
                                 </Link>
                                 <Link href='/Contact'>
-                                    <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Contact</li>
+                                    <li className="ml-10  uppercase hover:text-[#696969] ">Contact</li>
                                 </Link>
                                 <Link href='https://michellehlcn.wordpress.com' target='_blank'>
-                                    <li className="ml-10 text-xs uppercase hover:scale-110 hover:border-b">Personal Blog</li>
+                                    <li className="ml-10  uppercase hover:text-[#696969]">Personal Blog</li>
                                 </Link>
                             </ul>
                         </div>

@@ -7,15 +7,15 @@ const SwingStates = () => {
         <center>
       
         
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-10 mx-auto">
-                    <div class="modal-body">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-10 mx-auto">
+                    <div className="modal-body">
                       <Image src="https://Michellehlcn.github.io/Homepage/image2.jpeg" width="180px" alt=""></Image>
                       <h1>Swing States</h1>
                       <h5><p >16 battleground states voted and momentum on Electoral College Map from 1976 – 2020
                       </p>
-                     <a class="btn btn-primary btn-l text-uppercase" href="https://michellehlcn.wordpress.com/2021/05/27/swing-states/" target="_blank">link</a></h5>
+                     <a className="btn btn-primary btn-l text-uppercase" href="https://michellehlcn.wordpress.com/2021/05/27/swing-states/" target="_blank">link</a></h5>
                       <br/>
                       <div >
                         <h6>Description</h6>
@@ -34,7 +34,7 @@ const SwingStates = () => {
                         <br/>
                         <h6>Read more</h6>
                         <hr/>
-                        <span>See the full analytics on <a class="btn btn-secondary btn-l text-uppercase" href="https://michellehlcn.wordpress.com/2021/05/27/swing-states/" target="_blank" >Wordpress</a> for more information and source code of the project</span>
+                        <span>See the full analytics on <a className="btn btn-secondary btn-l text-uppercase" href="https://michellehlcn.wordpress.com/2021/05/27/swing-states/" target="_blank" >Wordpress</a> for more information and source code of the project</span>
                         <br/>
                       </div>
                     </div>

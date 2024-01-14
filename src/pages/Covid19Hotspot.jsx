@@ -5,22 +5,22 @@ const Covid19Hotspot =() => {
     return (
 <center>
     
-      <div class="modal-dialog h-100">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
+      <div className="modal-dialog h-100">
+        <div className="modal-content">
+          <div className="close-modal" data-bs-dismiss="modal">
+            <div className="lr">
+              <div className="rl"></div>
             </div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-10 mx-auto">
+                <div className="modal-body">
                   <Image src="https://michellehlcn.github.io/covid19hotspot/" width="180px" alt=""></Image>
                   <h1>COVID-19 Hotspot</h1>
                   <h5><p >A map made to track Covid-19 spreaders
                   </p>
-                  <a class="btn btn-primary btn-l text-uppercase" href="https://michellehlcn.github.io/covid19hotspot/">link</a></h5>
+                  <a className="btn btn-primary btn-l text-uppercase" href="https://michellehlcn.github.io/covid19hotspot/">link</a></h5>
                   <br />
                   <div >
                     <h6>Description</h6>
@@ -32,7 +32,7 @@ const Covid19Hotspot =() => {
                     <br />
                     <h6>Read more</h6>
                     <hr />
-                    <span>See the associated <a class="btn btn-secondary btn-l text-uppercase" href="https://github.com/Michellehlcn/covid19hotspot" target="_blank">github repository</a> for more information and source code of the project</span>
+                    <span>See the associated <a className="btn btn-secondary btn-l text-uppercase" href="https://github.com/Michellehlcn/covid19hotspot" target="_blank">github repository</a> for more information and source code of the project</span>
                     <br />
                   </div>
                 </div>

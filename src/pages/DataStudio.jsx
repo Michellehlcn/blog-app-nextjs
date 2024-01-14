@@ -5,10 +5,10 @@ const DataStudio = () => {
     return (
         <div>
             <center>
-                <div class="container">
-                    <div class="row">
+                <div className="container">
+                    <div className="row">
                         <div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                                 <Image src="https://Michellehlcn.github.io/Homepage/image1.jpeg" width="180px" alt=""></Image>
                                 <h1>Tracking COVID-19 Dataset</h1>
                                 <h5><p >Methodology: Python, DataStudio.

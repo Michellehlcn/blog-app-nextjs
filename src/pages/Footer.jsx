@@ -113,10 +113,6 @@ const Footer = () => {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
   
-    //setInterval(() => {handler()}, 300000)
-    setInterval(() => {    
-        fetch('https://ginger-tiny-fine.glitch.me')
-            .then((res) => console.log(res.status))}, 30000)
     useEffect(() => {
         setLoading(true)
         fetch('/api/now-playing')
