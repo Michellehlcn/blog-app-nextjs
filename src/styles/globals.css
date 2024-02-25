@@ -11,7 +11,7 @@ html{
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide 
   }
   body.dark {
-    @apply bg-[#000000] border-slate-50 text-[#ffffff]
+    @apply bg-[#000000] border-slate-50 text-white/75
  
   }
   h1, h2, h3, h4, h5, h6 {
@@ -36,7 +36,20 @@ html{
 @layer components {
 
   .card {
-    @apply bg-[#112240] mx-8 p-10 sm:p-10 flex flex-col sm:flex-row gap-8 items-center max-w-2xl shadow-md rounded-lg mt-[30%] sm:mt-8 transition-all;
+    @apply bg-[#112240] text-white/75 mx-8 p-10 sm:p-10 flex flex-col sm:flex-row gap-8 items-center max-w-2xl shadow-md rounded-lg mt-[30%] sm:mt-8 transition-all;
   }
 
 }
+
+/* .cursor-zoom-in {
+  cursor: zoom-in;
+}
+.relative {
+  position: relative;
+}
+.after\:shadow-highlight:after {
+  content: var(--tw-content);
+  --tw-shadow: inset 0 0 0 1px hsla(0,0%,100%,.05);
+  --tw-shadow-colored: inset 0 0 0 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+} */

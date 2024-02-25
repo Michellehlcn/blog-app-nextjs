@@ -24,11 +24,11 @@ const Main = () => {
 										]}/>
                         </span>
                     </a>
-                    <p className="py-5 pb-10 text-gray-600 max-w-[70%] mx-auto font-thin">
+                    <p className="py-5 pb-10 max-w-[70%] mx-auto font-thin">
                         Hello, My name's Michelle. I’m interested in buidling applications, devOps. I’m currently practicing as a software developer and freelancer.I’m looking to collaborate on projects which I can add up the value and further ideas
                     </p>
-                    <a className="border-slate-50 border-1 ring-1 rounded-lg py-3 p-3 cursor-pointer mx-auto text-[#83a2b4] hover:text-[#38bdf8]
-                        " href="/About" >See more about me.</a>
+                    <a className="border-slate-50 border-1 ring-1 rounded-lg py-3 p-3 cursor-pointer mx-auto  hover:text-[#38bdf8]
+                        " href="/About" >See more about me</a>
                     
                     {/* <div className=" py-10 px-40 flex items-center justify-center mx-w-[330px] m-auto">
                         <div className="mx-2 rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300 hover:text-[#38bdf8] hover:shadow-[#38bdf8]">

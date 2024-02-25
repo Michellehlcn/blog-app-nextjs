@@ -67,13 +67,13 @@ const NavBar = () => {
                                     <li className="ml-10 uppercase hover:text-[#696969] ">Blog</li>
                                 </Link>
                                 <Link href='/Gallery'>
-                                    <li className="ml-10  uppercase hover:text-[#696969]">Gallery</li>
+                                    <li className="ml-10  uppercase hover:text-[#696969]">Art</li>
                                 </Link>
                                 <Link href='/Contact'>
                                     <li className="ml-10  uppercase hover:text-[#696969] ">Contact</li>
                                 </Link>
                                 <Link href='https://michellehlcn.wordpress.com' target='_blank'>
-                                    <li className="ml-10  uppercase hover:text-[#696969]">Personal Blog</li>
+                                    <li className="ml-10  uppercase hover:text-[#696969]">Wordpress</li>
                                 </Link>
                             </ul>
                         </div>
@@ -135,12 +135,14 @@ const NavBar = () => {
                                <Link href="/Blog">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Blog</li>
                                 </Link>
-                               
+                                <Link href="/Gallery">
+                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><AiOutlineProject/>Art</li>
+                                </Link>
                                 <Link href="/Contact">
                                     <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"><BiPhoneCall/>Contact</li>
                                 </Link>
                                 <Link href='https://michellehlcn.wordpress.com' target='_blank'>
-                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Personal Blog</li>
+                                    <li onClick={() => setNav(false)} className="py-4 text-sm flex gap-3 items-center"> <SiBlogger />Wordpress</li>
                                 </Link>
                                 
                             </ul>

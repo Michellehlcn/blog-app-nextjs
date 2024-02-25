@@ -3,7 +3,8 @@ const nextConfig = {
 
   reactStrictMode: true,
   images: {
-    domains: ["i.scdn.co'"],
+    formats: ['image/avif', 'image/webp'],
+    domains: ["i.scdn.co'", "images.unsplash.com", "www.lightgalleryjs.com"],
   },
   webpack: (config, { isServer }) => {
   if (!isServer) {
